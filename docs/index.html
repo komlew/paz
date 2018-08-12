@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <title>PAZ</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body {
+      font: 18px/1.2 Helvetica, Arial, sans-serif;
+      background: #f7f8f9;
+      overflow: hidden;
+      font-family: 'Special Elite', 'Droid Sans', 'Roboto', 'Palatino', Helvetica, Arial, sans-serif;
+    }
+    body, nav ul, h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h1 {
+      line-height: 45px;
+      text-align: center;
+      background: #fff;
+      position: relative;
+      padding-top: 10px;
+      z-index: 2;
+    }
+    h2 {
+      font-size: 13px;
+      line-height: 15px;
+      color: #bbb;
+      white-space: nowrap;
+      position: absolute;
+      top: 1em;
+      left: 65%;
+      z-index: 3;
+    }
+    h4 {
+      font-family: Futura-CondensedExtraBold, 'Droid Sans';
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+      z-index: -1;
+      text-transform: uppercase;
+      display: inline-block;
+      margin: 0.5em 0 1em;
+    }
+    h4:before {
+      content: '';
+      position: absolute;
+      left: -3em;
+      right: -3em;
+      border-bottom: 1px solid #bbb;
+      display: block;
+      margin-top: 0.45em;
+      z-index: -1;
+    }
+    h4:after {
+      content: '';
+      position: absolute;
+      left: -5px;
+      right: -5px;
+      background: #f7f8f9;
+      display: block;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+    }
+    #menu {
+      display: none;
+    }
+    #menu + .menuicon {
+      color: #bbb;
+    }
+    a:hover,
+    #menu:focus + .menuicon,
+    #menu:checked + .menuicon {
+      animation: colorchange 9s infinite;
+      -webkit-animation: colorchange 9s infinite;
+    }
+    .menuicon svg {
+      fill: currentColor;
+    }
+    #menu:focus + .menuicon + .menu,
+    #menu:checked + .menuicon + .menu {
+      transform: translateY(0);
+    }
+    nav {
+      position: relative;
+    }
+    .menuicon {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 23px;
+      width: 23px;
+      padding: 16px;
+      font-size: 0;
+      z-index: 3;
+    }
+    .menu {
+      list-style: none;
+      background: #fff;
+      position: absolute;
+      width: 100%;
+      transition: 0.3s;
+      transform: translateY(-100%);
+      box-shadow: 0 1px 3px #ccc;
+      border-top: 1px solid #eee;
+    }
+    .menu a {
+      display: block;
+      padding: 10px 15px 5px;
+      border-bottom: 1px solid #eee;
+    }
+    div {
+      height: calc(100vh - 55px);
+      overflow: scroll;
+    }
+    main,
+    footer {
+      padding: 15px;
+    }
+    
+    .food {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .food li {
+      margin: 0 0 1em;
+    }
+    .food p {
+      margin: 0.5em 0;
+      font-size: 12px;
+    }
+    .food h5,
+    .food aside {
+      font: 16px/1em Futura-CondensedExtraBold, 'Droid Sans';
+    }
+    .food h5 {
+      text-transform: uppercase;
+    }
+    .food aside {
+      float: right;
+      margin: -1em 0 0.5em;
+      padding: 0 0 0.5em 0.5em;
+      clear: right;
+    }
+
+    footer {
+      background: #231f20;
+      color: #fff;
+    }
+    footer p {
+      font-weight: 100 !important;
+    }
+
+
+    @media only screen and (min-device-width: 480px) {
+      main {
+        background: #787878;
+      }
+    }
+    @media only screen and (min-device-width: 768px) {
+      main {
+        background: #c99;
+      }
+    }
+    @media only screen and (min-device-width: 1024px) {
+      main {
+        background: #9c9;
+      }
+    }
+    @keyframes colorchange {
+      0%   {color: #ff8759;}
+      33%  {color: #e21067;}
+      66%  {color: #ffbc00;}
+      100% {color: #ff8759;}
+    }
+    @-webkit-keyframes colorchange {
+      0%   {color: #ff8759;}
+      33%  {color: #e21067;}
+      66%  {color: #ffbc00;}
+      100% {color: #ff8759;}
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Homemade+Apple|Nothing+You+Could+Do|Special+Elite"
+    rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>PAZ</h1>
+    <h2>restaurant in <br>Amsterdam</h2>
+    <nav>
+      <input type="checkbox" id="menu" name="menu" />
+      <label for="menu" class="menuicon">
+        <svg viewBox="0 0 100 100">
+          <rect width="100" height="12" x="0" y="10" />
+          <rect width="100" height="12" x="0" y="44" />
+          <rect width="100" height="12" x="0" y="78" />
+        </svg>
+      </label>
+      <ul class="menu">
+        <li><a href="#/menu">Menu</a></li>
+        <li><a href="#/coockingstyle">Cooking style</a></li>
+        <li><a href="#/ingredients">Quality of ingredients</a></li>
+        <li><a href="#/reservation">Reservation</a></li>
+        <li><a href="#/location">Location</a></li>
+        <li><a href="#/vacancies">Vacancies</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div>
+    <main>
+      <h3>Daily menu</h3>
+      <section>
+        <h4>Salads</h4>
+        <ul class="food">
+          <li>
+            <h5>Green Salad</h5>
+            <aside><small>small</small> €9</aside>
+            <aside><small>big</small> €12</aside>
+            <p>rocket salad, parsley, basil, oregano, grape tomatoes, red onions, cucumber, olive oil, red wine vinegar</p>
+          </li>
+          <li>
+            <h5>Potato Salad</h5>
+            <aside><small>small</small> €10</aside>
+            <aside><small>big</small> €13</aside>
+            <p>potatoes, eggs, onion, mustard, black pepper, mayonnaise</p>
+          </li>
+          <li>
+            <h5>Caesar Salad</h5>
+            <aside><small>small</small> €12</aside>
+            <aside><small>big</small> €15</aside>
+            <p>lettuce, garlic, dijon mustard, black pepper, lemon juice, anchovies, coddled eggs, grated parmesan, croutons</p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h4>Red Wine</h4>
+        <ul class="food">
+          <li>
+            <h5>Cabernet Sauvignon</h5>
+            <aside><small>glass</small> €4.5</aside>
+            <aside><small>bottle</small> €23</aside>
+            <p>Castello di Romitorio, Romito di Romitorio Sant’Antimo Rosso, Italy, Toscany, 2004</p>
+          </li>
+          <li>
+            <h5>Pinot Noir</h5>
+            <aside><small>glass</small> €5</aside>
+            <aside><small>bottle</small> €25</aside>
+            <p>Ventisquero Herú, Pinot Noir Casablanca Valley, Chili, 2009</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>PAZ Amsterdam</p>
+      <p>Breakfast, burgers & steaks</p>
+      <p>Open fire cooking</p>
+      <p>Utrechtsestraat 128,</p>
+      <p>1017 VT, Amsterdam</p>
+      <p>020 626 8560</p>
+    </footer>
+  </div>
+</body>
+</html>
