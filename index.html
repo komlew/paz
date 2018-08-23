@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <meta charset="utf-8">
   <meta content="ie=edge" http-equiv="x-ua-compatible">
@@ -12,34 +13,255 @@
       overflow: hidden;
       font-family: 'Special Elite', 'Droid Sans', 'Roboto', 'Palatino', Helvetica, Arial, sans-serif;
     }
-    body, nav ul, h1, h2, h3, h4, h5, h6 {
+
+    body,
+    nav ul,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin: 0;
       padding: 0;
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+
     h1 {
-      line-height: 45px;
       text-align: center;
       background: #fff;
       position: relative;
-      padding-top: 10px;
+      padding: 10px;
       z-index: 2;
+      line-height: 0;
     }
-    h2 {
-      font-size: 13px;
-      line-height: 15px;
+
+    h1 svg {
+      height: 35px;
+    }
+
+    #menu {
+      display: none;
+    }
+
+    #menu+.menuicon {
       color: #bbb;
-      white-space: nowrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav a:hover,
+    #menu:focus+.menuicon,
+    #menu:checked+.menuicon {
+      animation: colorchange 9s infinite;
+      -webkit-animation: colorchange 9s infinite;
+    }
+
+    nav svg {
+      fill: currentColor;
+    }
+
+    #menu:focus+.menuicon+.menu,
+    #menu:checked+.menuicon+.menu {
+      transform: translateY(0);
+    }
+
+    nav {
+      position: relative;
+    }
+
+    .mapicon {
       position: absolute;
-      top: 1em;
-      left: 65%;
+      bottom: 0;
+      right: 0;
+      width: 25px;
+      padding: 15px;
+      font-size: 0;
+      z-index: 3;
+      color: #aaa;
+    }
+
+    .menuicon {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 23px;
+      width: 23px;
+      padding: 16px;
+      font-size: 0;
       z-index: 3;
     }
+
+    .menu {
+      list-style: none;
+      background: #fff;
+      position: absolute;
+      width: 100%;
+      transition: 0.3s;
+      transform: translateY(-100%);
+      box-shadow: 0 1px 3px #ccc;
+      border-top: 1px solid #eee;
+    }
+
+    .menu a {
+      display: block;
+      padding: 12px 15px 10px;
+      border-bottom: 1px solid #eee;
+      font-family: Futura, Trebuchet MS, Arial, sans-serif;
+      font-stretch: condensed;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    main {
+      height: calc(100vh - 55px);
+      overflow: scroll;
+    }
+
+    article {
+      padding: 15px;
+    }
+
+    .food {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .food li {
+      margin: 0 0 1em;
+    }
+
+    .food p {
+      margin: 0.5em 0;
+      font-size: 12px;
+    }
+
+    .food h5,
+    .food aside {
+      font: 16px/1em Futura-CondensedExtraBold, 'Droid Sans';
+    }
+
+    .food h5 {
+      text-transform: uppercase;
+    }
+
+    .food aside {
+      float: right;
+      margin: -1em 0 0.5em;
+      padding: 0 0 0.5em 0.5em;
+      clear: right;
+    }
+
+    footer {
+      padding: 30px 15px 20px;
+      background: #231f20;
+      color: #fff;
+      text-align: center;
+      font-family: 'Futura-CondensedMedium', 'Futura-CondensedExtraBold', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
+    }
+
+    footer a {
+      color: #fff;
+    }
+
+    footer p {
+      font-weight: 100 !important;
+      font-size: 1.3em;
+    }
+
     h4 {
-      font-family: Futura-CondensedExtraBold, 'Droid Sans';
+      font-size: 2em;
+      font-weight: 500;
+    }
+
+    h5 {
+      text-transform: uppercase;
+      font-size: 0.8em;
+    }
+
+    figure {
+      position: relative;
+      font-size: 0;
+      z-index: -1;
+      width: 270px;
+      margin: 20px auto 50px;
+    }
+
+    figure img,
+    figure svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    figure svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    figcaption {
+      position: absolute;
+      bottom: 1.1%;
+      left: 12.8%;
+      font-size: 3.41vh;
+      font-weight: 900;
+    }
+
+    section {
+      width: 200px;
+      margin: 30px auto;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .note {
+      border: 5px dotted #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media only screen and (min-device-width: 480px) {}
+
+    @media only screen and (min-device-width: 768px) {}
+
+    @media only screen and (min-device-width: 1024px) {}
+
+    @keyframes colorchange {
+      0% {
+        color: #ff8759;
+      }
+      33% {
+        color: #e21067;
+      }
+      66% {
+        color: #ffbc00;
+      }
+      100% {
+        color: #ff8759;
+      }
+    }
+
+    @-webkit-keyframes colorchange {
+      0% {
+        color: #ff8759;
+      }
+      33% {
+        color: #e21067;
+      }
+      66% {
+        color: #ffbc00;
+      }
+      100% {
+        color: #ff8759;
+      }
+    }
+
+    /*
+    h4 {
+      font-family: 'Futura-CondensedMedium', 'Futura-CondensedExtraBold', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
       left: 50%;
       position: relative;
       transform: translateX(-50%);
@@ -69,133 +291,21 @@
       z-index: -1;
       top: 0;
     }
-    #menu {
-      display: none;
-    }
-    #menu + .menuicon {
-      color: #bbb;
-    }
-    a:hover,
-    #menu:focus + .menuicon,
-    #menu:checked + .menuicon {
-      animation: colorchange 9s infinite;
-      -webkit-animation: colorchange 9s infinite;
-    }
-    .menuicon svg {
-      fill: currentColor;
-    }
-    #menu:focus + .menuicon + .menu,
-    #menu:checked + .menuicon + .menu {
-      transform: translateY(0);
-    }
-    nav {
-      position: relative;
-    }
-    .menuicon {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 23px;
-      width: 23px;
-      padding: 16px;
-      font-size: 0;
-      z-index: 3;
-    }
-    .menu {
-      list-style: none;
-      background: #fff;
-      position: absolute;
-      width: 100%;
-      transition: 0.3s;
-      transform: translateY(-100%);
-      box-shadow: 0 1px 3px #ccc;
-      border-top: 1px solid #eee;
-    }
-    .menu a {
-      display: block;
-      padding: 10px 15px 5px;
-      border-bottom: 1px solid #eee;
-    }
-    div {
-      height: calc(100vh - 55px);
-      overflow: scroll;
-    }
-    main,
-    footer {
-      padding: 15px;
-    }
-    
-    .food {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    .food li {
-      margin: 0 0 1em;
-    }
-    .food p {
-      margin: 0.5em 0;
-      font-size: 12px;
-    }
-    .food h5,
-    .food aside {
-      font: 16px/1em Futura-CondensedExtraBold, 'Droid Sans';
-    }
-    .food h5 {
-      text-transform: uppercase;
-    }
-    .food aside {
-      float: right;
-      margin: -1em 0 0.5em;
-      padding: 0 0 0.5em 0.5em;
-      clear: right;
-    }
-
-    footer {
-      background: #231f20;
-      color: #fff;
-    }
-    footer p {
-      font-weight: 100 !important;
-    }
-
-
-    @media only screen and (min-device-width: 480px) {
-      main {
-        background: #787878;
-      }
-    }
-    @media only screen and (min-device-width: 768px) {
-      main {
-        background: #c99;
-      }
-    }
-    @media only screen and (min-device-width: 1024px) {
-      main {
-        background: #9c9;
-      }
-    }
-    @keyframes colorchange {
-      0%   {color: #ff8759;}
-      33%  {color: #e21067;}
-      66%  {color: #ffbc00;}
-      100% {color: #ff8759;}
-    }
-    @-webkit-keyframes colorchange {
-      0%   {color: #ff8759;}
-      33%  {color: #e21067;}
-      66%  {color: #ffbc00;}
-      100% {color: #ff8759;}
-    }
+    */
   </style>
   <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Homemade+Apple|Nothing+You+Could+Do|Special+Elite"
-    rel="stylesheet">
 </head>
+
 <body>
   <header>
-    <h1>PAZ</h1>
-    <h2>restaurant in <br>Amsterdam</h2>
+    <h1>
+      <a href="http://paz.world/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 192">
+          <path d="M42.4 129c5.5 0 10.8-1 15.9-3.1 5-2.1 9.5-5 13.3-8.7 3.9-3.8 6.9-8.2 9.1-13.2 2.2-5.1 3.3-10.5 3.3-16.2V42.3c0-5.5-1.1-10.9-3.3-16-2.2-5-5.2-9.5-9.1-13.2-3.8-3.7-8.2-6.7-13.2-8.8C53.3 2.1 48 1 42.4 1H1v190.3h25.9v-62.1h15.5v-.2zm-15.5-25.3V26.2h15.5c2.1 0 4.2.4 6.1 1.3 2 .9 3.7 2 5.2 3.5 1.4 1.4 2.5 3.1 3.3 4.9s1.2 3.9 1.2 6v45.8c0 2.2-.4 4.3-1.2 6.2s-1.9 3.6-3.3 5-3.2 2.6-5.2 3.5c-1.9.8-3.9 1.3-6.1 1.3H26.9zM220.3 188.2V42.5c0-5.7-1.1-11.2-3.3-16.3s-5.3-9.5-9.2-13.2c-3.8-3.6-8.2-6.5-13.2-8.7a40.7 40.7 0 0 0-32.1 0c-5 2.2-9.4 5.1-13.2 8.7-3.8 3.7-6.8 8.1-9 13.2S137 36.8 137 42.5V191h25.9v-62h31.4v62h26v-2.8zM163 101.4V39.7c0-4.5 1.5-8 4.6-11.2 3.1-3.1 6.6-4.6 11-4.6 2.1 0 4.2.4 6.1 1.3a19 19 0 0 1 5.2 3.5c1.4 1.4 2.5 3.1 3.3 5s1.2 3.9 1.2 6.1v61.4H163v.2zM365.8 191.2v-25.4h-57.1L365.8 1h-92.5v25.4h56.6l-56.6 164.8z"
+          />
+        </svg>
+      </a>
+    </h1>
     <nav>
       <input type="checkbox" id="menu" name="menu" />
       <label for="menu" class="menuicon">
@@ -210,63 +320,41 @@
         <li><a href="#/coockingstyle">Cooking style</a></li>
         <li><a href="#/ingredients">Quality of ingredients</a></li>
         <li><a href="#/reservation">Reservation</a></li>
-        <li><a href="#/location">Location</a></li>
         <li><a href="#/vacancies">Vacancies</a></li>
+        <li><a href="#/contact">Contact</a></li>
       </ul>
+      <a class="mapicon" href="https://goo.gl/maps/Xh39g1UHb4q" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+          <path d="M462.3 12.1a340.8 340.8 0 0 0-244.7 151.6 379 379 0 0 0-40 85.8c-30.5 101.2-13.7 198 59.3 343.8 43.5 87 90.3 163.7 190.5 313.2 55.2 82.2 56.4 83.5 72.6 83.5 16.7 0 17.1-.6 79.6-93.7 96-143.7 140.8-217.9 183.8-303.8 67.2-134.7 85.6-222 66.3-315.8-8.5-40-30.5-90.2-55-124.9a441 441 0 0 0-79.2-79 342.4 342.4 0 0 0-233.2-60.7zM555 76.9c85 17.4 154.1 71.4 194 151.2a318 318 0 0 1 21.6 65c6 27.7 6 74 0 103.4a658 658 0 0 1-31.4 100.2c-21.5 54-68 142-114.6 216.6C598.3 755.6 501.8 901 500 901c-.7 0-20.8-29.2-44.4-64.8C366.3 702.7 331 644 291.2 563c-59.6-121.4-76.7-196.3-61.5-270.6a277 277 0 0 1 235.9-219c20.3-3 67.2-.8 89.4 3.6z"
+          />
+          <path d="M478 191.5a171.7 171.7 0 0 0-76 33.9 153.7 153.7 0 0 0-40.9 52c-12.5 25.6-15.1 37.5-15.1 68s2.6 42.3 15.1 68a151.9 151.9 0 0 0 71.3 71 152.7 152.7 0 0 0 176-28.9 155.2 155.2 0 0 0 42-148.5 184 184 0 0 0-30.4-59.8 158.8 158.8 0 0 0-142-55.7zm41.6 62a95.3 95.3 0 0 1 72.2 72.3 94.2 94.2 0 0 1-111.3 111.3c-35.3-7.2-65-37-72.3-72.2a94.2 94.2 0 0 1 111.4-111.3z"
+          />
+        </svg>
+      </a>
     </nav>
   </header>
-  <div>
-    <main>
-      <h3>Daily menu</h3>
+  <main>
+    <article>
+      <figure>
+        <img src="logo.svg" alt="PAZ restaurant in Amsterdam">
+        <svg viewBox="0 -10 9.3 10.25"><text style="font:1px 'Special Elite';font-weight:900">open fire cooking</text></svg>
+      </figure>
       <section>
-        <h4>Salads</h4>
-        <ul class="food">
-          <li>
-            <h5>Green Salad</h5>
-            <aside><small>small</small> €9</aside>
-            <aside><small>big</small> €12</aside>
-            <p>rocket salad, parsley, basil, oregano, grape tomatoes, red onions, cucumber, olive oil, red wine vinegar</p>
-          </li>
-          <li>
-            <h5>Potato Salad</h5>
-            <aside><small>small</small> €10</aside>
-            <aside><small>big</small> €13</aside>
-            <p>potatoes, eggs, onion, mustard, black pepper, mayonnaise</p>
-          </li>
-          <li>
-            <h5>Caesar Salad</h5>
-            <aside><small>small</small> €12</aside>
-            <aside><small>big</small> €15</aside>
-            <p>lettuce, garlic, dijon mustard, black pepper, lemon juice, anchovies, coddled eggs, grated parmesan, croutons</p>
-          </li>
-        </ul>
+        "A place of peace where we use the ancient techniques of open fire cooking"
       </section>
-      <section>
-        <h4>Red Wine</h4>
-        <ul class="food">
-          <li>
-            <h5>Cabernet Sauvignon</h5>
-            <aside><small>glass</small> €4.5</aside>
-            <aside><small>bottle</small> €23</aside>
-            <p>Castello di Romitorio, Romito di Romitorio Sant’Antimo Rosso, Italy, Toscany, 2004</p>
-          </li>
-          <li>
-            <h5>Pinot Noir</h5>
-            <aside><small>glass</small> €5</aside>
-            <aside><small>bottle</small> €25</aside>
-            <p>Ventisquero Herú, Pinot Noir Casablanca Valley, Chili, 2009</p>
-          </li>
-        </ul>
+      <section class="note">
+        We are hiring cooks and waitresses.<br/>
+        <a href="mailto:info@paz.world?Subject=Want%20to%20join%20the%20team" target="_top">Send us an email</a>.
       </section>
-    </main>
+    </article>
     <footer>
-      <p>PAZ Amsterdam</p>
-      <p>Breakfast, burgers & steaks</p>
-      <p>Open fire cooking</p>
-      <p>Utrechtsestraat 128,</p>
-      <p>1017 VT, Amsterdam</p>
-      <p>020 626 8560</p>
+      <h4>PAZ</h4>
+      <h5>Open fire cooking</h5>
+      <p><a href="https://www.google.com/maps/dir//PAZ+Open+Fire+Cooking,+Utrechtsestraat+128H,+1017+VT+Amsterdam/@52.361413,4.8288902,12z/" target="_blank">Utrechtsestraat 128,<br/>1017 VT, Amsterdam</a></p>
+      <p>9AM - 10PM<br/>Everyday</p>
+      <p>Reservation:<br/><a href="tel:+31207700700">+31 20 7700 700</a></p>
     </footer>
-  </div>
+  </main>
 </body>
+
 </html>
