@@ -6,22 +6,24 @@
   <title>PAZ</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <style>
-    body {
-      font: 18px/1.2 Helvetica, Arial, sans-serif;
-      background: #f7f8f9;
-      overflow: hidden;
-      font-family: 'Special Elite', 'Droid Sans', 'Roboto', 'Palatino', Helvetica, Arial, sans-serif;
-    }
-    body,
-    nav ul,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    html, body, nav ul, h1, h2, h3, h4, h5, h6 {
       margin: 0;
       padding: 0;
+    }
+    body {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      font: 18px/1.2 Helvetica, Arial, sans-serif;
+      background: #f7f8f9;
+      font-family: 'Special Elite', 'Droid Sans', 'Roboto', 'Palatino', Helvetica, Arial, sans-serif;
+    }
+    
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
     }
     h1 {
       text-align: center;
@@ -99,34 +101,10 @@
       font-weight: 500;
       text-transform: uppercase;
     }
+
     main {
-      height: calc(100vh - 55px);
-      overflow: scroll;
-    }
-    article {
       padding: 15px;
-    }
-    footer {
-      padding: 30px 15px 20px;
-      background: #231f20;
-      color: #fff;
-      text-align: center;
-      font-family: 'Futura-CondensedMedium', 'Futura-CondensedExtraBold', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
-    }
-    footer a {
-      color: #fff;
-    }
-    footer p {
-      font-weight: 100 !important;
-      font-size: 1.3em;
-    }
-    h4 {
-      font-size: 2em;
-      font-weight: 500;
-    }
-    h5 {
-      text-transform: uppercase;
-      font-size: 0.8em;
+      margin: 55px 0 0;
     }
     figure {
       position: relative;
@@ -163,36 +141,44 @@
       padding: 20px;
       text-align: center;
     }
+    
+    footer {
+      padding: 30px 15px 20px;
+      background: #231f20;
+      color: #fff;
+      text-align: center;
+      font-family: 'Futura-CondensedMedium', 'Futura-CondensedExtraBold', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
+    }
+    footer a {
+      color: #fff;
+    }
+    footer p {
+      font-weight: 100 !important;
+      font-size: 1.3em;
+    }
+    h4 {
+      font-size: 2em;
+      font-weight: 500;
+    }
+    h5 {
+      text-transform: uppercase;
+      font-size: 1em;
+    }
+    
     @media only screen and (min-device-width: 480px) {}
     @media only screen and (min-device-width: 768px) {}
     @media only screen and (min-device-width: 1024px) {}
     @keyframes colorchange {
-      0% {
-        color: #ff8759;
-      }
-      33% {
-        color: #e21067;
-      }
-      66% {
-        color: #ffbc00;
-      }
-      100% {
-        color: #ff8759;
-      }
+      0% {color: #ff8759;}
+      33% {color: #e21067;}
+      66% {color: #ffbc00;}
+      100% {color: #ff8759;}
     }
     @-webkit-keyframes colorchange {
-      0% {
-        color: #ff8759;
-      }
-      33% {
-        color: #e21067;
-      }
-      66% {
-        color: #ffbc00;
-      }
-      100% {
-        color: #ff8759;
-      }
+      0% {color: #ff8759;}
+      33% {color: #e21067;}
+      66% {color: #ffbc00;}
+      100% {color: #ff8759;}
     }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
@@ -232,24 +218,24 @@
     </nav>
   </header>
   <main>
-    <article>
-      <figure>
-        <img src="logo.svg" alt="PAZ restaurant in Amsterdam">
-        <svg viewBox="0 -10 9.3 10.25"><text style="font:1px 'Special Elite';font-weight:900">open fire cooking</text></svg>
-      </figure>
-      <section>"A place of peace where we use the ancient techniques of open fire cooking"</section>
-      <section class="note">
-        We are hiring cooks and waitresses.<br/>
-        <a href="mailto:info@paz.world?Subject=Want%20to%20join%20the%20team" target="_top">Send us an email</a>.
-      </section>
-    </article>
-    <footer>
-      <h4>PAZ</h4>
-      <h5>Open fire cooking</h5>
-      <p><a href="https://www.google.com/maps/dir//PAZ+Open+Fire+Cooking,+Utrechtsestraat+128H,+1017+VT+Amsterdam/@52.361413,4.8288902,12z/" target="_blank">Utrechtsestraat 128,<br/>1017 VT, Amsterdam</a></p>
-      <p>9AM - 10PM<br/>Everyday</p>
-      <p>Reservation:<br/><a href="tel:+31207700700">+31 20 7700 700</a></p>
-    </footer>
+    <figure>
+      <img src="logo.svg" alt="PAZ restaurant in Amsterdam">
+      <svg viewBox="0 -10 9.3 10.25"><text style="font:1px 'Special Elite';font-weight:900">open fire cooking</text></svg>
+    </figure>
+    <section>
+      "A place of peace where we use the ancient techniques of open fire cooking"
+    </section>
+    <section class="note">
+      We are hiring cooks and waitresses.<br/>
+      <a href="mailto:info@paz.world?Subject=Want%20to%20join%20the%20team" target="_top">Send us an email</a>.
+    </section>
   </main>
+  <footer>
+    <h4>PAZ</h4>
+    <h5>Open fire cooking</h5>
+    <p><a href="https://www.google.com/maps/dir//PAZ+Open+Fire+Cooking,+Utrechtsestraat+128H,+1017+VT+Amsterdam/@52.361413,4.8288902,12z/" target="_blank">Utrechtsestraat 128,<br/>1017 VT, Amsterdam</a></p>
+    <p>17:00 - 22.00<br/>Everyday</p>
+    <p>Reservation:<br/><a href="tel:+31207700700">+31 20 7700 700</a></p>
+  </footer>
 </body>
 </html>
