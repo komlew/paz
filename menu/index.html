@@ -43,11 +43,10 @@
     #menu+.menuicon {
       color: #bbb;
     }
-    nav a {
-      text-decoration: none;
-      color: inherit;
-    }
-    nav a:hover,
+    main a:hover,
+    main a:focus,
+    .menu a:hover,
+    .menu a:focus,
     #menu:focus+.menuicon,
     #menu:checked+.menuicon {
       animation: colorchange 9s infinite;
@@ -60,12 +59,9 @@
     #menu:checked+.menuicon+.menu {
       transform: translateY(0);
     }
-    nav {
-      position: relative;
-    }
     .mapicon {
       position: absolute;
-      bottom: 0;
+      top: 0;
       right: 0;
       width: 25px;
       padding: 15px;
@@ -75,7 +71,7 @@
     }
     .menuicon {
       position: absolute;
-      bottom: 0;
+      top: 0;
       left: 0;
       height: 23px;
       width: 23px;
@@ -88,19 +84,24 @@
       background: #fff;
       position: absolute;
       width: 100%;
+      font-size: 0;
       transition: 0.3s;
       transform: translateY(-100%);
       box-shadow: 0 1px 3px #ccc;
+    }
+    .menu li {
+      font-family: Futura, Trebuchet MS, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #bbb;
+      padding: 11px 15px 10px;
       border-top: 1px solid #eee;
     }
     .menu a {
       display: block;
-      padding: 12px 15px 10px;
-      border-bottom: 1px solid #eee;
-      font-family: Futura, Trebuchet MS, Arial, sans-serif;
-      font-stretch: condensed;
-      font-weight: 500;
-      text-transform: uppercase;
+      text-decoration: none;
+      color: #231f20;
     }
 
     main {
@@ -171,6 +172,29 @@
         margin-left: 38px;
       }
     }
+    @media only screen and (min-device-width: 1024px) {
+      .menuicon {
+        display: none;
+      }
+      .menu {
+        transform: none;
+        text-align: center;
+        border-top: 1px solid #eee;
+      }
+      .menu li {
+        display: inline-block;
+      }
+      .menu a {
+        border-bottom: 1px solid #eee;
+      }
+      .menu a:hover,
+      .menu a:focus {
+        border-bottom-color: inherit;
+      }
+      main {
+        margin-top: 100px;
+      }
+    }
 
     @keyframes colorchange {
       0% {color: #ff8759;}
@@ -191,27 +215,27 @@
     h2:not(:first-child) {
       margin-top: 50px;
     }
-    ul {
+    main ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
-    li {
+    main li {
       clear: both;
       overflow: hidden;
       padding-bottom: 3px;
     }
-    li p {
+    main li p {
       margin: 5px;
       font-size: 14px;
     }
-    ul aside {
+    main aside {
       font-size: 22px;
       line-height: 1em;
       float: right;
       clear: right;
     }
-    ul aside + aside {
+    main aside + aside {
       padding-top: 3px;
     }
     .percent:before,
@@ -306,7 +330,7 @@
 <body>
   <header>
     <h1>
-      <a href="https://komlew.github.io/paz/">
+      <a href="/paz/">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 192">
           <path d="M42.4 129c5.5 0 10.8-1 15.9-3.1 5-2.1 9.5-5 13.3-8.7 3.9-3.8 6.9-8.2 9.1-13.2 2.2-5.1 3.3-10.5 3.3-16.2V42.3c0-5.5-1.1-10.9-3.3-16-2.2-5-5.2-9.5-9.1-13.2-3.8-3.7-8.2-6.7-13.2-8.8C53.3 2.1 48 1 42.4 1H1v190.3h25.9v-62.1h15.5v-.2zm-15.5-25.3V26.2h15.5c2.1 0 4.2.4 6.1 1.3 2 .9 3.7 2 5.2 3.5 1.4 1.4 2.5 3.1 3.3 4.9s1.2 3.9 1.2 6v45.8c0 2.2-.4 4.3-1.2 6.2s-1.9 3.6-3.3 5-3.2 2.6-5.2 3.5c-1.9.8-3.9 1.3-6.1 1.3H26.9zM220.3 188.2V42.5c0-5.7-1.1-11.2-3.3-16.3s-5.3-9.5-9.2-13.2c-3.8-3.6-8.2-6.5-13.2-8.7a40.7 40.7 0 0 0-32.1 0c-5 2.2-9.4 5.1-13.2 8.7-3.8 3.7-6.8 8.1-9 13.2S137 36.8 137 42.5V191h25.9v-62h31.4v62h26v-2.8zM163 101.4V39.7c0-4.5 1.5-8 4.6-11.2 3.1-3.1 6.6-4.6 11-4.6 2.1 0 4.2.4 6.1 1.3a19 19 0 0 1 5.2 3.5c1.4 1.4 2.5 3.1 3.3 5s1.2 3.9 1.2 6.1v61.4H163v.2zM365.8 191.2v-25.4h-57.1L365.8 1h-92.5v25.4h56.6l-56.6 164.8z"/>
         </svg>
@@ -322,12 +346,12 @@
         </svg>
       </label>
       <ul class="menu">
-        <li><a href="/paz/menu">Menu</a></li>
+        <li>Menu</li>
         <li><a href="/paz/coockingstyle">Cooking style</a></li>
         <li><a href="/paz/ingredients">Quality of ingredients</a></li>
-        <!--<li><a href="/paz/reservation">Reservation</a></li>
+        <li><a href="/paz/reservation">Reservation</a></li>
         <li><a href="/paz/vacancies">Vacancies</a></li>
-        <li><a href="/paz/contact">Contact</a></li>-->
+        <li><a href="/paz/contact">Contact</a></li>
       </ul>
       <a class="mapicon" href="https://goo.gl/maps/Xh39g1UHb4q" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
