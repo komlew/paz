@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="ie=edge" http-equiv="x-ua-compatible">
-  <title>PAZ</title>
+  <title>PAZ restaurant Amsterdam: steaks, burgers, meat</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <style>
     html, body, nav ul, h1, h2, h3, h4, h5, h6 {
@@ -17,7 +17,7 @@
       overflow: auto;
       font: 18px/1.2 Helvetica, Arial, sans-serif;
       background: #f7f8f9;
-      font-family: 'Special Elite', 'Droid Sans', 'Roboto', 'Palatino', Helvetica, Arial, sans-serif;
+      font-family: 'Futura-CondensedMedium', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
     }
     
     header {
@@ -106,11 +106,13 @@
     main {
       padding: 15px;
       margin: 55px 0 0;
+      text-align: center;
+      font-size: 0;
     }
     figure {
       position: relative;
       font-size: 0;
-      width: 300px;
+      width: 290px;
       margin: 30px auto;
     }
     .logo {
@@ -133,25 +135,28 @@
       right: 20px;
       font-size: 20px;
       font-weight: 100;
-      font-family: 'Futura-CondensedMedium', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
       color: #fff;
       text-transform: uppercase;
-      background: #e21010;
+      background: #bb1033;
       padding: 0 5px 1px;
       line-height: 1em;
       text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
       display: inline-block;
     }
     section {
+      text-align: left;
+    }
+    .quote {
       width: 200px;
       margin: 30px auto;
-      font-size: 14px;
-      line-height: 1.4;
+      font: 14px/1.4 'Special Elite', 'Droid Sans', 'Roboto', 'Palatino', Helvetica, Arial, sans-serif;
     }
     .note {
+      font-size: 18px;
       border: 5px dotted #ccc;
       padding: 20px;
       text-align: center;
+      margin-bottom: 15px;
     }
     
     footer {
@@ -177,8 +182,29 @@
       font-size: 1em;
     }
     
-    @media only screen and (min-device-width: 480px) {}
-    @media only screen and (min-device-width: 768px) {}
+    @media only screen and (min-device-width: 330px) {
+      figure {
+        width: 300px;
+      }
+    }
+    @media only screen and (min-device-width: 480px) {
+      figure {
+        width: 350px;
+      }
+    }
+    @media only screen and (min-device-width: 768px) {
+      section {
+        display: inline-block;
+        width: 350px;
+        vertical-align: top;
+      }
+      section:nth-of-type(2n) {
+        margin-left: 38px;
+      }
+      .logo {
+        margin-top: 45px;
+      }
+    }
     @media only screen and (min-device-width: 1024px) {}
     @keyframes colorchange {
       0% {color: #ff8759;}
@@ -192,71 +218,13 @@
       66% {color: #ffbc00;}
       100% {color: #ff8759;}
     }
-    /*
-    .food {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    .food li {
-      margin: 0 0 1em;
-    }
-    .food p {
-      margin: 0.5em 0;
-      font-size: 12px;
-    }
-    .food h5,
-    .food aside {
-      font: 16px/1em Futura-CondensedExtraBold, 'Droid Sans';
-    }
-    .food h5 {
-      text-transform: uppercase;
-    }
-    .food aside {
-      float: right;
-      margin: -1em 0 0.5em;
-      padding: 0 0 0.5em 0.5em;
-      clear: right;
-    }
-    h4 {
-      font-family: 'Futura-CondensedMedium', 'Futura-CondensedExtraBold', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
-      left: 50%;
-      position: relative;
-      transform: translateX(-50%);
-      z-index: -1;
-      text-transform: uppercase;
-      display: inline-block;
-      margin: 0.5em 0 1em;
-    }
-    h4:before {
-      content: '';
-      position: absolute;
-      left: -3em;
-      right: -3em;
-      border-bottom: 1px solid #bbb;
-      display: block;
-      margin-top: 0.45em;
-      z-index: -1;
-    }
-    h4:after {
-      content: '';
-      position: absolute;
-      left: -5px;
-      right: -5px;
-      background: #f7f8f9;
-      display: block;
-      height: 100%;
-      z-index: -1;
-      top: 0;
-    }
-    */
   </style>
   <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>
-      <a href="http://paz.world/">
+      <a href="https://komlew.github.io/paz/">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 192">
           <path d="M42.4 129c5.5 0 10.8-1 15.9-3.1 5-2.1 9.5-5 13.3-8.7 3.9-3.8 6.9-8.2 9.1-13.2 2.2-5.1 3.3-10.5 3.3-16.2V42.3c0-5.5-1.1-10.9-3.3-16-2.2-5-5.2-9.5-9.1-13.2-3.8-3.7-8.2-6.7-13.2-8.8C53.3 2.1 48 1 42.4 1H1v190.3h25.9v-62.1h15.5v-.2zm-15.5-25.3V26.2h15.5c2.1 0 4.2.4 6.1 1.3 2 .9 3.7 2 5.2 3.5 1.4 1.4 2.5 3.1 3.3 4.9s1.2 3.9 1.2 6v45.8c0 2.2-.4 4.3-1.2 6.2s-1.9 3.6-3.3 5-3.2 2.6-5.2 3.5c-1.9.8-3.9 1.3-6.1 1.3H26.9zM220.3 188.2V42.5c0-5.7-1.1-11.2-3.3-16.3s-5.3-9.5-9.2-13.2c-3.8-3.6-8.2-6.5-13.2-8.7a40.7 40.7 0 0 0-32.1 0c-5 2.2-9.4 5.1-13.2 8.7-3.8 3.7-6.8 8.1-9 13.2S137 36.8 137 42.5V191h25.9v-62h31.4v62h26v-2.8zM163 101.4V39.7c0-4.5 1.5-8 4.6-11.2 3.1-3.1 6.6-4.6 11-4.6 2.1 0 4.2.4 6.1 1.3a19 19 0 0 1 5.2 3.5c1.4 1.4 2.5 3.1 3.3 5s1.2 3.9 1.2 6.1v61.4H163v.2zM365.8 191.2v-25.4h-57.1L365.8 1h-92.5v25.4h56.6l-56.6 164.8z"/>
         </svg>
@@ -272,12 +240,9 @@
         </svg>
       </label>
       <ul class="menu">
-        <li><a href="/menu">Menu</a></li>
-        <li><a href="/coockingstyle">Cooking style</a></li>
-        <li><a href="/ingredients">Quality of ingredients</a></li>
-        <!--<li><a href="/reservation">Reservation</a></li>
-        <li><a href="/vacancies">Vacancies</a></li>
-        <li><a href="/contact">Contact</a></li>-->
+        <li><a href="/paz/menu">Menu</a></li>
+        <li><a href="/paz/coockingstyle">Cooking style</a></li>
+        <li><a href="/paz/ingredients">Quality of ingredients</a></li>
       </ul>
       <a class="mapicon" href="https://goo.gl/maps/Xh39g1UHb4q" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
@@ -288,31 +253,37 @@
     </nav>
   </header>
   <main>
-    <figure class="logo">
-      <img src="logo.svg" alt="PAZ restaurant in Amsterdam">
-      <svg viewBox="0 -10 9.3 10.25"><text style="font:1px 'Special Elite';font-weight:900">open fire cooking</text></svg>
-    </figure>
     <section>
-      "A place of peace where we use the ancient techniques of open fire cooking"
+      <figure class="logo">
+        <img src="logo.svg" alt="PAZ restaurant in Amsterdam">
+        <svg viewBox="0 -10 9.3 10.25"><text style="font:1px 'Special Elite';font-weight:900">open fire cooking</text></svg>
+      </figure>
+      <p class="quote">"A place of peace where we use the ancient techniques of open fire cooking"</p>
     </section>
-    <a href="/coockingstyle">
-      <figure>
-        <img src="./img/open_fire_cooking.jpg" alt="Vegetables and meat cooked on open fire">
-        <figcaption>Open fire cooking</figcaption>
-      </figure>
-    </a>
-    <a href="/ingredients">
-      <figure>
-        <img src="./img/smoked_meat.jpg" alt="Smoked meat, baked vegetables and herbs">
-        <figcaption>Ingredients</figcaption>
-      </figure>
-    </a>
-    <a href="/menu">
-      <figure>
-        <img src="./img/asparagus.jpg" alt="Baked tomatos and asparagus with cream">
-        <figcaption>Menu</figcaption>
-      </figure>
-    </a>
+    <section>
+      <a href="/paz/coockingstyle">
+        <figure>
+          <img src="./img/open_fire_cooking.jpg" alt="Vegetables and meat cooked on open fire">
+          <figcaption>Open fire cooking</figcaption>
+        </figure>
+      </a>
+    </section>
+    <section>
+      <a href="/paz/ingredients">
+        <figure>
+          <img src="./img/smoked_meat.jpg" alt="Smoked meat, baked vegetables and herbs">
+          <figcaption>Ingredients</figcaption>
+        </figure>
+      </a>
+    </section>
+    <section>
+      <a href="/paz/menu">
+        <figure>
+          <img src="./img/asparagus.jpg" alt="Baked tomatos and asparagus with cream">
+          <figcaption>Menu</figcaption>
+        </figure>
+      </a>
+    </section>
     <section class="note">
       We are hiring cooks and waitresses.<br/>
       <a href="mailto:info@paz.world?Subject=Want%20to%20join%20the%20team" target="_top">Send us an email</a>.
