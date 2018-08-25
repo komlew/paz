@@ -105,9 +105,10 @@
 
     main {
       padding: 15px;
-      margin: 55px 0 0;
+      margin: 55px auto 0;
       text-align: center;
       font-size: 0;
+      max-width: 768px;
     }
     figure {
       position: relative;
@@ -160,18 +161,17 @@
       font-size: 1em;
     }
     
-    @media only screen and (min-device-width: 480px) {}
     @media only screen and (min-device-width: 768px) {
       section {
         display: inline-block;
         width: 350px;
         vertical-align: top;
       }
-      section + section {
+      section:nth-of-type(2n) {
         margin-left: 38px;
       }
     }
-    @media only screen and (min-device-width: 1024px) {}
+
     @keyframes colorchange {
       0% {color: #ff8759;}
       33% {color: #e21067;}
