@@ -1,0 +1,370 @@
+html, body, nav ul, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font: 18px/1.2 Helvetica, Arial, sans-serif;
+  background: #f7f8f9;
+  font-family: 'Futura-CondensedMedium', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+}
+h1 {
+  text-align: center;
+  background: #fff;
+  position: relative;
+  padding: 10px;
+  z-index: 1;
+  line-height: 0;
+}
+h1 img {
+  height: 35px;
+}
+#menu {
+  display: none;
+}
+#menu+.menuicon {
+  color: #bbb;
+}
+main a:hover,
+main a:focus,
+.menu a:hover,
+.menu a:focus,
+#menu:focus+.menuicon,
+#menu:checked+.menuicon {
+  animation: colorchange 9s infinite;
+  -webkit-animation: colorchange 9s infinite;
+}
+main a img {
+  transition: 0.3s;
+}
+main a:hover img {
+  filter: contrast(130%);
+}
+nav img {
+  fill: currentColor;
+}
+#menu:focus+.menuicon+.menu,
+#menu:checked+.menuicon+.menu {
+  transform: translateY(0);
+}
+.mapicon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  padding: 15px;
+  font-size: 0;
+  z-index: 3;
+  color: #aaa;
+}
+.menuicon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 23px;
+  width: 23px;
+  padding: 16px;
+  font-size: 0;
+  z-index: 3;
+}
+.menu {
+  list-style: none;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  font-size: 0;
+  transition: 0.3s;
+  transform: translateY(-100%);
+  box-shadow: 0 1px 3px #ccc;
+}
+.menu li {
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #bbb;
+  padding: 11px 15px 10px;
+  border-top: 1px solid #eee;
+}
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: #231f20;
+}
+
+main {
+  padding: 15px;
+  margin: 55px auto 0;
+  text-align: center;
+  font-size: 0;
+  max-width: 768px;
+}
+figure {
+  position: relative;
+  font-size: 0;
+  width: 290px;
+  margin: 20px auto;
+}
+figure img,
+figure svg {
+  width: 100%;
+  height: 100%;
+}
+figcaption {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 20px;
+  font-weight: 100;
+  color: #fff;
+  text-transform: uppercase;
+  background: #bb1033;
+  padding: 0 5px 1px;
+  line-height: 1em;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+  display: inline-block;
+}
+section {
+  text-align: left;
+}
+.quote {
+  width: 200px;
+  margin: 30px auto;
+  font: 14px/1.4 'Special Elite', 'Droid Sans', 'Roboto', 'Palatino', Helvetica, Arial, sans-serif;
+}
+
+footer {
+  padding: 30px 15px 20px;
+  background: #231f20;
+  color: #fff;
+  text-align: center;
+}
+footer a {
+  color: #fff;
+}
+footer p {
+  font-weight: 100 !important;
+  font-size: 1.3em;
+}
+h5 {
+  font-size: 2em;
+  font-weight: 500;
+}
+h6 {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+/* index */
+.logo {
+  width: 270px;
+  margin: 20px auto 50px;
+}
+.logo svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.note {
+  font-size: 18px;
+  border: 5px dotted #ccc;
+  padding: 20px;
+  text-align: center;
+  margin: 15px 0 20px;
+}
+/* index */
+
+/* menu */
+h2 {
+  font-size: 28px;
+}
+h2:not(:first-child) {
+  margin-top: 50px;
+}
+h3 {
+  font-size: 28px;
+  line-height: 1em;
+  font-weight: 100;
+  background: #241f20;
+  display: inline-block;
+  color: #fff;
+  padding: 0 5px;
+  margin: 20px 0 10px;
+}
+h3 + p {
+  font-size: 14px;
+  margin: 0 5px 10px;
+}
+h4 {
+  font-weight: 100;
+  background: #bb1033;
+  display: inline-block;
+  color: #fff;
+  padding: 0 5px;
+  font-size: 22px;
+  line-height: 1em;
+}
+main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main li {
+  clear: both;
+  overflow: hidden;
+  padding-bottom: 3px;
+}
+main li p {
+  margin: 5px;
+  font-size: 14px;
+}
+main aside {
+  font-size: 22px;
+  line-height: 1em;
+  float: right;
+  clear: right;
+  margin-left: 1em;
+}
+main aside + aside {
+  padding-top: 3px;
+}
+.percent:before,
+.glass:before,
+.bottle:before,
+.s20:before,
+.s25:before,
+.s30:before,
+.s33:before,
+.s50:before,
+.s75:before {
+  font-size: 18px;
+  margin-right: 0.25em;
+  font-variant: all-small-caps;
+  color: #777;
+}
+.percent:before {
+  content: '100gr';
+}
+.glass:before {
+  content: 'glass';
+}
+.bottle:before {
+  content: 'bottle';
+}
+.s20:before {
+  content: '0.20L';
+}
+.s25:before {
+  content: '0.25L';
+}
+.s30:before {
+  content: '0.30L';
+}
+.s33:before {
+  content: '0.33L';
+}
+.s50:before {
+  content: '0.50L';
+}
+.s75:before {
+  content: '0.75L';
+}
+.updated {
+  display: block;
+  font-size: 14px;
+  font-weight: 100;
+  color: #bbb;
+}
+.addition {
+  background: #ff8759;
+}
+.addition:before {
+  content: '+';
+  border-right: 3px solid #f7f8f9;
+  display: inline-block;
+  padding-right: 5px;
+  margin-right: 5px;
+}
+.tap {
+  padding-right: 0;
+}
+.tap:after {
+  content: 'TAP';
+  border-left: 3px solid #f7f8f9;
+  display: inline-block;
+  padding: 0 5px;
+  margin-left: 5px;
+  background: #ff8759;
+}
+/* menu */
+
+@media only screen and (min-device-width: 330px) {
+  figure {
+    width: 300px;
+  }
+}
+@media only screen and (min-device-width: 480px) {
+  figure {
+    width: 350px;
+  }
+}
+@media only screen and (min-device-width: 768px) {
+  section {
+    display: inline-block;
+    width: 350px;
+    vertical-align: top;
+  }
+  section:nth-of-type(2n) {
+    margin-left: 38px;
+  }
+  .logo {
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-device-width: 1024px) {
+  .menuicon {
+    display: none;
+  }
+  .menu {
+    transform: none;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+  .menu li {
+    display: inline-block;
+    border-top: none;
+  }
+  .menu a {
+    border-bottom: 1px solid transparent;
+  }
+  .menu a:hover,
+  .menu a:focus {
+    border-bottom-color: inherit;
+  }
+  main {
+    margin-top: 100px;
+  }
+}
+
+@keyframes colorchange {
+  0% {color: #ff8759;}
+  33% {color: #e21067;}
+  66% {color: #ffbc00;}
+  100% {color: #ff8759;}
+}
+@-webkit-keyframes colorchange {
+  0% {color: #ff8759;}
+  33% {color: #e21067;}
+  66% {color: #ffbc00;}
+  100% {color: #ff8759;}
+}

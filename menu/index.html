@@ -4,349 +4,22 @@
   <meta charset="utf-8">
   <meta content="ie=edge" http-equiv="x-ua-compatible">
   <link rel="canonical" href="http://www.paz.world/menu/">
-  <meta name="Description" content="PAZ restaurant menu, the list of ingredients, meat, vegetables, vegetarian and vegan options, desserts and drinks. We have unique recipes of the main courses and adjust them according to your special dietary requirements. We serve starters, salads, steaks, burgers, side dishes and breakfasts. Check out our alcohol and soft drinks, wine card, tea and Lavazza coffee. Our recent menu also includes prices in euro.">
+  <meta name="Description" content="PAZ restaurant menu, the list of ingredients, meat, vegetables, vegetarian and vegan options, desserts and drinks. We have unique recipes of the main courses and adjust them according to your special dietary requirements. We serve starters, salads, steaks, burgers and side dishes. Check out our alcohol and soft drinks, wine card, tea and Lavazza coffee. Our recent menu prices are in euro and include taxes.">
   <title>PAZ restaurant Amsterdam: steaks, burgers, meat</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <style>
-    html, body, nav ul, h1, h2, h3, h4, h5, h6 {
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      font: 18px/1.2 Helvetica, Arial, sans-serif;
-      background: #f7f8f9;
-      font-family: 'Futura-CondensedMedium', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
-    }
-    
-    header {
-      position: fixed;
-      z-index: 5;
-      width: 100%;
-      top: 0;
-    }
-    h1 {
-      text-align: center;
-      background: #fff;
-      position: relative;
-      padding: 10px;
-      z-index: 1;
-      line-height: 0;
-    }
-    h1 svg {
-      height: 35px;
-    }
-    #menu {
-      display: none;
-    }
-    #menu+.menuicon {
-      color: #bbb;
-    }
-    main a:hover,
-    main a:focus,
-    .menu a:hover,
-    .menu a:focus,
-    #menu:focus+.menuicon,
-    #menu:checked+.menuicon {
-      animation: colorchange 9s infinite;
-      -webkit-animation: colorchange 9s infinite;
-    }
-    nav svg {
-      fill: currentColor;
-    }
-    #menu:focus+.menuicon+.menu,
-    #menu:checked+.menuicon+.menu {
-      transform: translateY(0);
-    }
-    .mapicon {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 25px;
-      padding: 15px;
-      font-size: 0;
-      z-index: 3;
-      color: #aaa;
-    }
-    .menuicon {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 23px;
-      width: 23px;
-      padding: 16px;
-      font-size: 0;
-      z-index: 3;
-    }
-    .menu {
-      list-style: none;
-      background: #fff;
-      position: absolute;
-      width: 100%;
-      font-size: 0;
-      transition: 0.3s;
-      transform: translateY(-100%);
-      box-shadow: 0 1px 3px #ccc;
-    }
-    .menu li {
-      font-family: Futura, Trebuchet MS, Arial, sans-serif;
-      font-weight: 500;
-      font-size: 18px;
-      text-transform: uppercase;
-      color: #bbb;
-      padding: 11px 15px 10px;
-      border-top: 1px solid #eee;
-    }
-    .menu a {
-      display: block;
-      text-decoration: none;
-      color: #231f20;
-    }
-
-    main {
-      padding: 15px;
-      margin: 55px auto 0;
-      text-align: center;
-      font-size: 0;
-      max-width: 768px;
-    }
-    figure {
-      position: relative;
-      font-size: 0;
-      width: 100%;
-      margin: 20px auto 10px;
-    }
-    figure img,
-    figure svg {
-      width: 100%;
-      height: 100%;
-    }
-    figcaption {
-      position: absolute;
-      bottom: 10px;
-      right: 20px;
-      font-size: 20px;
-      font-weight: 100;
-      color: #fff;
-      text-transform: uppercase;
-      background: #bb1033;
-      padding: 0 5px 1px;
-      line-height: 1em;
-      text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
-      display: inline-block;
-    }
-    section {
-      text-align: left;
-    }
-    
-    footer {
-      padding: 30px 15px 20px;
-      background: #231f20;
-      color: #fff;
-      text-align: center;
-    }
-    footer a {
-      color: #fff;
-    }
-    footer p {
-      font-weight: 100 !important;
-      font-size: 1.3em;
-    }
-    h5 {
-      font-size: 2em;
-      font-weight: 500;
-    }
-    h6 {
-      text-transform: uppercase;
-      font-size: 1em;
-    }
-    
-    @media only screen and (min-device-width: 768px) {
-      section {
-        display: inline-block;
-        width: 350px;
-        vertical-align: top;
-      }
-      section:nth-of-type(2n) {
-        margin-left: 38px;
-      }
-    }
-    @media only screen and (min-device-width: 1024px) {
-      .menuicon {
-        display: none;
-      }
-      .menu {
-        transform: none;
-        text-align: center;
-        border-top: 1px solid #eee;
-      }
-      .menu li {
-        display: inline-block;
-      }
-      .menu a {
-        border-bottom: 1px solid #eee;
-      }
-      .menu a:hover,
-      .menu a:focus {
-        border-bottom-color: inherit;
-      }
-      main {
-        margin-top: 100px;
-      }
-    }
-
-    @keyframes colorchange {
-      0% {color: #ff8759;}
-      33% {color: #e21067;}
-      66% {color: #ffbc00;}
-      100% {color: #ff8759;}
-    }
-    @-webkit-keyframes colorchange {
-      0% {color: #ff8759;}
-      33% {color: #e21067;}
-      66% {color: #ffbc00;}
-      100% {color: #ff8759;}
-    }
-
-    h2 {
-      font-size: 28px;
-    }
-    h2:not(:first-child) {
-      margin-top: 50px;
-    }
-    main ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    main li {
-      clear: both;
-      overflow: hidden;
-      padding-bottom: 3px;
-    }
-    main li p {
-      margin: 5px;
-      font-size: 14px;
-    }
-    main aside {
-      font-size: 22px;
-      line-height: 1em;
-      float: right;
-      clear: right;
-      margin-left: 1em;
-    }
-    main aside + aside {
-      padding-top: 3px;
-    }
-    .percent:before,
-    .glass:before,
-    .bottle:before,
-    .s20:before,
-    .s25:before,
-    .s30:before,
-    .s33:before,
-    .s50:before,
-    .s75:before {
-      font-size: 18px;
-      margin-right: 0.25em;
-      font-variant: all-small-caps;
-      color: #777;
-    }
-    .percent:before {
-      content: '100gr';
-    }
-    .glass:before {
-      content: 'glass';
-    }
-    .bottle:before {
-      content: 'bottle';
-    }
-    .s20:before {
-      content: '0.20L';
-    }
-    .s25:before {
-      content: '0.25L';
-    }
-    .s30:before {
-      content: '0.30L';
-    }
-    .s33:before {
-      content: '0.33L';
-    }
-    .s50:before {
-      content: '0.50L';
-    }
-    .s75:before {
-      content: '0.75L';
-    }
-    .updated {
-      display: block;
-      font-size: 14px;
-      font-weight: 100;
-      color: #bbb;
-    }
-    h3 {
-      font-size: 28px;
-      line-height: 1em;
-      font-weight: 100;
-      background: #241f20;
-      display: inline-block;
-      color: #fff;
-      padding: 0 5px;
-      margin: 20px 0 10px;
-    }
-    h4 {
-      font-weight: 100;
-      background: #bb1033;
-      display: inline-block;
-      color: #fff;
-      padding: 0 5px;
-      font-size: 22px;
-      line-height: 1em;
-    }
-    .addition {
-      background: #ff8759;
-    }
-    .addition:before {
-      content: '+';
-      border-right: 3px solid #f7f8f9;
-      display: inline-block;
-      padding-right: 5px;
-      margin-right: 5px;
-    }
-    .tap {
-      padding-right: 0;
-    }
-    .tap:after {
-      content: 'TAP';
-      border-left: 3px solid #f7f8f9;
-      display: inline-block;
-      padding: 0 5px;
-      margin-left: 5px;
-      background: #ff8759;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="../styles.css">
 </head>
 <body>
   <header>
     <h1>
       <a href="/paz/" aria-label="PAZ restaurant Amsterdam: steaks, burgers, meat">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 192">
-          <path d="M42.4 129c5.5 0 10.8-1 15.9-3.1 5-2.1 9.5-5 13.3-8.7 3.9-3.8 6.9-8.2 9.1-13.2 2.2-5.1 3.3-10.5 3.3-16.2V42.3c0-5.5-1.1-10.9-3.3-16-2.2-5-5.2-9.5-9.1-13.2-3.8-3.7-8.2-6.7-13.2-8.8C53.3 2.1 48 1 42.4 1H1v190.3h25.9v-62.1h15.5v-.2zm-15.5-25.3V26.2h15.5c2.1 0 4.2.4 6.1 1.3 2 .9 3.7 2 5.2 3.5 1.4 1.4 2.5 3.1 3.3 4.9s1.2 3.9 1.2 6v45.8c0 2.2-.4 4.3-1.2 6.2s-1.9 3.6-3.3 5-3.2 2.6-5.2 3.5c-1.9.8-3.9 1.3-6.1 1.3H26.9zM220.3 188.2V42.5c0-5.7-1.1-11.2-3.3-16.3s-5.3-9.5-9.2-13.2c-3.8-3.6-8.2-6.5-13.2-8.7a40.7 40.7 0 0 0-32.1 0c-5 2.2-9.4 5.1-13.2 8.7-3.8 3.7-6.8 8.1-9 13.2S137 36.8 137 42.5V191h25.9v-62h31.4v62h26v-2.8zM163 101.4V39.7c0-4.5 1.5-8 4.6-11.2 3.1-3.1 6.6-4.6 11-4.6 2.1 0 4.2.4 6.1 1.3a19 19 0 0 1 5.2 3.5c1.4 1.4 2.5 3.1 3.3 5s1.2 3.9 1.2 6.1v61.4H163v.2zM365.8 191.2v-25.4h-57.1L365.8 1h-92.5v25.4h56.6l-56.6 164.8z"/>
-        </svg>
+        <img src="../svg/paz.svg" alt="PAZ restaurant Amsterdam">
       </a>
     </h1>
     <nav>
       <input type="checkbox" id="menu" name="menu" />
       <label for="menu" class="menuicon">
-        <svg viewBox="0 0 100 100">
-          <rect width="100" height="12" x="0" y="10" />
-          <rect width="100" height="12" x="0" y="44" />
-          <rect width="100" height="12" x="0" y="78" />
-        </svg>
+        <img src="../svg/menu.svg" alt="Menu">
       </label>
       <ul class="menu">
         <li>Menu</li>
@@ -356,162 +29,186 @@
         <li><a href="/paz/vacancies">Vacancies</a></li>
         <li><a href="/paz/contact">Contact</a></li>
       </ul>
-      <a class="mapicon" href="https://goo.gl/maps/Xh39g1UHb4q" target="_blank" rel="noopener" rel="noreferrer" aria-label="Show PAZ restaurant Amsterdam location on map">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-          <path d="M462.3 12.1a340.8 340.8 0 0 0-244.7 151.6 379 379 0 0 0-40 85.8c-30.5 101.2-13.7 198 59.3 343.8 43.5 87 90.3 163.7 190.5 313.2 55.2 82.2 56.4 83.5 72.6 83.5 16.7 0 17.1-.6 79.6-93.7 96-143.7 140.8-217.9 183.8-303.8 67.2-134.7 85.6-222 66.3-315.8-8.5-40-30.5-90.2-55-124.9a441 441 0 0 0-79.2-79 342.4 342.4 0 0 0-233.2-60.7zM555 76.9c85 17.4 154.1 71.4 194 151.2a318 318 0 0 1 21.6 65c6 27.7 6 74 0 103.4a658 658 0 0 1-31.4 100.2c-21.5 54-68 142-114.6 216.6C598.3 755.6 501.8 901 500 901c-.7 0-20.8-29.2-44.4-64.8C366.3 702.7 331 644 291.2 563c-59.6-121.4-76.7-196.3-61.5-270.6a277 277 0 0 1 235.9-219c20.3-3 67.2-.8 89.4 3.6z"/>
-          <path d="M478 191.5a171.7 171.7 0 0 0-76 33.9 153.7 153.7 0 0 0-40.9 52c-12.5 25.6-15.1 37.5-15.1 68s2.6 42.3 15.1 68a151.9 151.9 0 0 0 71.3 71 152.7 152.7 0 0 0 176-28.9 155.2 155.2 0 0 0 42-148.5 184 184 0 0 0-30.4-59.8 158.8 158.8 0 0 0-142-55.7zm41.6 62a95.3 95.3 0 0 1 72.2 72.3 94.2 94.2 0 0 1-111.3 111.3c-35.3-7.2-65-37-72.3-72.2a94.2 94.2 0 0 1 111.4-111.3z"/>
-        </svg>
+      <a class="mapicon" href="https://goo.gl/maps/Xh39g1UHb4q" target="_blank" rel="noopener" rel="noreferrer" aria-label="Show PAZ Utrechtsestraat 128H Amsterdam on map">
+        <img src="../svg/pin.svg" alt="PAZ restaurant location">
       </a>
     </nav>
   </header>
   <main>
     <section>
       <h2>Menu</h2>
-      <small class="updated">updated on 25.08.2018</small>
+      <small class="updated">if you have any food allergies please let us know</small>
       <h3>Starters</h3>
       <ul>
         <li>
           <h4>Goat Cheese Brule</h4>
-          <aside>6.-</aside>
+          <aside>8.-</aside>
+          <p>Brûlée made with creamy soft goat cheese and served with slowly blackened cherry tomatoes, dressed in red wine, olive oil and toasted pine-nuts on a bed of fresh rocket leafs.</p>
         </li>
         <li>
           <h4>Charred Asparagus</h4>
-          <aside>6.-</aside>
+          <aside>10.-</aside>
+          <p>Fresh asparagus spears charred grilled over wood flames and coated with silky saffron beurre blanc (saffran, white wine and butter sauce).</p>
         </li>
       </ul>
       <figure>
         <img src="../img/charred_asparagus.jpg" alt="PAZ charred asparagus with sause">
-        <figcaption>PAZ Charred Asparagus</figcaption>
+        <figcaption>Charred Asparagus</figcaption>
       </figure>
       <h3>Salads</h3>
       <ul>
         <li>
           <h4>PAZ Salad</h4>
-          <aside>7.-</aside>
+          <aside>9.-</aside>
+          <p>A salad featuring fresh green salad leaves, green apple slices and dressed with lemon juice and olive oil.</p>
         </li>
         <li>
           <h4>Charred Tomato &amp; Caprese</h4>
-          <aside>9.-</aside>
+          <aside>12.-</aside>
+          <p>Charred and peeled tomatoes coated with aged balsamic vinegar, fresh crisp Arugula (rocket), scattered with toasted pine-nuts, mozzarella pieces and parmesan shavings.</p>
         </li>
         <li>
-          <h4>Avocado with Chimichurri</h4>
-          <aside>9.-</aside>
+          <h4>Avocado Chicken with Chimichurri Sauce</h4>
+          <aside>12.-</aside>
+          <p>Crunchy Romaine salad with avocado slices, grilled chicken thighs, slow charred & roasted sweat red peppers, crispy onions dressed with chimichurri sauce (chopped parsley, minced garlic, olive oil, oregano, red pepper flakes, and white wine vinegar).</p>
         </li>
       </ul>
+      <figure>
+        <img src="../img/avocado_chicken_salad.jpg" alt="PAZ Avocado Chicken salad with Chimichurri Sauce">
+        <figcaption>Avocado Chicken with Chimichurri Sauce</figcaption>
+      </figure>
       <h3>Steaks</h3>
+      <p>Served with charred tomatoes, crispy onion, maldon salt</p>
       <ul>
         <li>
           <h4>Tenderloin</h4>
           <aside>180gr / 22.-</aside>
           <aside>250gr / 30.-</aside>
+          <p>Most tender steak in menu, however some guests find it less delicious than other cuts because it has less fat around meat. Sourced from New Zealand. If well done requested, it will be grilled in slices.</p>
         </li>
         <li>
           <h4>Ribeye</h4>
           <aside>250gr / 25.-</aside>
-        </li>
-        <li>
-          <h4>Flat Iron</h4>
-          <aside>250gr / 20.-</aside>
+          <p>Aged in vacuum bags for 10 days. The ribeye is perfect for those who prefer flavor. It's fattier than other steaks, fat provides an insane amount of flavor that steak fanatics can’t get enough of. Tender and tasty with nice marbling (the streaks of fat resemble a marble pattern). No bone. Sourced from US.</p>
         </li>
         <li>
           <h4>Dry Aged Ribeye</h4>
           <aside class="percent">9.-</aside>
-          <p>400-600gr (bone-in)</p>
+          <p>400-600gr (dry aged for 28 days, bone-in). High intense flavor of meat, smooth, fine texture and exceptional tenderness. The meat lies in the upper rib cage which is not weight-bearing and gets little exercise. The degree of muscle usage by cattle is substantially determined by how much a particular muscle is used during a cattle’s lifespan. The less use, the more tender.</p>
         </li>
         <li>
           <h4>Dry Aged NY Steak</h4>
           <aside class="percent">9.-</aside>
-          <p>350-450gr (bone-in)</p>
+          <p>350-450gr (dry aged for 28 days, bone-in). High intense flavor of meat. The strip steak is a cut of beef steaks from the short loin from a cow. It consists of a muscle that does little work, the longissimus, making the meat particularly tender, although not as tender as the nearby psoas major or tenderloin. Fat content of the strip is somewhere between the two cuts.</p>
         </li>
         <li>
           <h4>Dry Aged T-bone</h4>
           <aside class="percent">10.-</aside>
-          <p>450-600gr</p>
+          <p>450-600gr (dry aged for 28 days). A beef cut from the short loin (sirloin). T-bone steaks are cut closer to the front, and contain a smaller section of tenderloin. Owing to their large size and the fact that they contain meat from two of the most prized cuts of beef (the short loin and the tenderloin), T-bone steaks are generally considered one of the highest quality steaks.</p>
         </li>
         <li>
           <h4>Lamb Rack</h4>
           <aside>29.-</aside>
-          <p>4 racks, organic</p>
+          <p>4 racks, organic. A cut of meat from part of the rib cage of the lamb. The cut has the eye muscle in it, but no tenderloin.</p>
         </li>
       </ul>
       <figure>
-        <img src="../img/burger_fries.jpg" alt="PAZ hommade burger with onion and fries">
-        <figcaption>PAZ Burger with Onion and Fries</figcaption>
+        <img src="../img/dry_aged_tbone.jpg" alt="PAZ Dry Aged T-bone Steak">
+        <figcaption>Dry Aged T-bone Steak</figcaption>
       </figure>
       <h3>Burgers</h3>
       <ul>
         <li>
           <h4>Classic</h4>
           <aside>11.-</aside>
+          <p>180gr beef patty, caramelized onions, beef tomato, lettuce leafs, pickles, roasted homemade bread.</p>
         </li>
         <li>
           <h4>No bun</h4>
           <aside>11.-</aside>
+          <p>180gr beef patty, caramelized onions, beef tomato, avocado, lettuce leafs.</p>
         </li>
         <li>
           <h4>Onion &amp; Cheese Sauce</h4>
           <aside>12.-</aside>
+          <p>180gr beef patty, creamy cheese sauce, crispy onions, roasted homemade bread.</p>
         </li>
         <li>
           <h4>Funguy</h4>
           <aside>13.-</aside>
+          <p>180g beef patty, beef tomato, charred mixed mushrooms, smokey mayo, caramelized onion, roasted homemade bread.</p>
         </li>
         <li>
           <h4 class="addition">Cheddar</h4>
           <aside>1.-</aside>
+          <p>This classic pick gives the burger a creamy melt and sharper, bolder flavor.</p>
         </li>
         <li>
           <h4 class="addition">Smoked Beef</h4>
           <aside>1.5</aside>
+          <p>Since PAZ is only working with beef and not pork, we serve smoked beef which is the smoked bacon version of beef.</p>
         </li>
       </ul>
+      <figure>
+        <img src="../img/burger_fries.jpg" alt="PAZ hommade burger with onion and fries">
+        <figcaption>PAZ Burger with Fries</figcaption>
+      </figure>
       <h3>Sides</h3>
       <ul>
-        <li>
-          <h4>Chapa Seared Mushroom</h4>
-          <aside>6.5</aside>
-        </li>
-        <li>
-          <h4>Seasonal Charred Veggies</h4>
-          <aside>4.5</aside>
-        </li>
-        <li>
-          <h4>Amber Roasted Onion</h4>
-          <aside>4.5</aside>
-        </li>
-        <li>
-          <h4>Charred Tomatos</h4>
-          <aside>4.5</aside>
-        </li>
         <li>
           <h4>French Fries</h4>
           <aside>3.5</aside>
         </li>
-      </ul>
-      <h3>Desserts</h3>
-      <ul>
         <li>
-          <h4>Burnt Cheesecake with Lemon Kurd</h4>
+          <h4>Ember Roasted Onion</h4>
+          <aside>5.-</aside>
+          <p>Slowly roasted soft and sweet onion drizzle with olive oil and sprinkled with flaky Malden salt.</p>
+        </li>
+        <li>
+          <h4>Seasonal Charred Veggies</h4>
+          <aside>7.-</aside>
+          <p>Seasonal garden vegetables gently charred on the chapa with olive oil.</p>
+        </li>
+        <li>
+          <h4>Charred Tomatos</h4>
           <aside>7.-</aside>
         </li>
         <li>
+          <h4>Chapa Seared Mushrooms</h4>
+          <aside>10.-</aside>
+          <p>Locally sourced fresh selected mushrooms with onions, garlic, lightly seared and drizzled with fresh thyme butter.</p>
+        </li>
+      </ul>
+      <figure>
+        <img src="../img/chapa_seared_mushroom.jpg" alt="PAZ Chapa Seared Mushrooms">
+        <figcaption>Chapa Seared Mushrooms</figcaption>
+      </figure>
+      <h3>Desserts</h3>
+      <ul>
+        <li>
           <h4>Tartuf di Piazzo</h4>
-          <aside>5.-</aside>
+          <aside>7.-</aside>
+          <p>Originating from Pizzo in Calabria. Unwrapping the paper exterior reveals a chocolate ice cream bombe with a hidden centre of hazelnut ice cream, sugared hazelnuts and thick chocolate sauce.</p>
+        </li>
+        <li>
+          <h4>Burnt Cheesecake with Lemon Kurd</h4>
+          <aside>9.-</aside>
+          <p>Famous Basque cheesecake from the La Vina restaurant in San Sebastian. Caramelized cream cheese combined with clotted cream and cooked to perfection with burnt top.</p>
         </li>
       </ul>
       <figure>
         <img src="../img/cheesecake.jpg" alt="PAZ homemade cheesecake with strawberry">
-        <figcaption>PAZ Cheesecake</figcaption>
+        <figcaption>Cheesecake</figcaption>
       </figure>
     </section>
 
     <section>
       <h2>Drinks</h2>
-      <small class="updated">you can always ask for a carafe of water</small>
+      <small class="updated">the menu is updated on 12.10.2018</small>
       <h3>Soft drinks</h3>
       <ul>
         <li>
-          <h4>Cola / Zero</h4>
+          <h4>Cola / Cola Zero</h4>
           <aside>2.9</aside>
         </li>
         <li>
@@ -546,41 +243,57 @@
           <p>Big Tom</p>
         </li>
       </ul>
+      <figure>
+        <img src="../img/cheese_brulee.jpg" alt="PAZ goat cheese brulee">
+        <figcaption>Goat Cheese Brule</figcaption>
+      </figure>
       <h3>Beer</h3>
       <ul>
         <li>
-          <h4 class="tap">Kurnuit</h4>
+          <h4 class="tap">Kornuit</h4>
           <aside class="s25">3.2</aside>
+          <p>Brewed by and for a new generation. By adding a special kind of hop, Cascade, Kornuit has a surprisingly fresh taste and a soft finish.</p>
         </li>
         <li>
           <h4>Grolsch 0.0</h4>
           <aside class="s30">2.9</aside>
+          <p>Premium, non alcoholic, golden malt beverage with a distinct, hop accented, fresh taste similar to that of Grolsch Premium Lager.</p>
         </li>
         <li>
           <h4>Grolsch Weisener</h4>
           <aside class="s30">4.2</aside>
+          <p>Finest wheat malt, barley malt, yeast, hops and water: these are the rigorously selected ingredients of this deliciously flavoured beer. Pale gold, available for a perfect sip of freshness at any moment.</p>
         </li>
         <li>
           <h4>Asahi</h4>
           <aside class="s33">4.5</aside>
+          <p>Refreshingly crisp with no sweetness in the taste, light and not much aftertaste Asahi makes it an excellent match for any cuisine.</p>
         </li>
         <li>
           <h4>'t IJ Wit</h4>
           <aside class="s33">4.9</aside>
+          <p>A full-bodied, Amsterdam wheat beer that is dangerously ‘moreish’. Slightly cloudy, it has a beautiful golden colour and a soft, foamy head.</p>
         </li>
         <li>
           <h4>Jopen Mooi Nel IPA</h4>
           <aside class="s30">4.9</aside>
+          <p>Jopen Northsea IPA (aka Mooie Nel) is an IPA containing plenty of American hops, which creates bitterness with lots of fruity tones.</p>
         </li>
         <li>
           <h4>Oedipus Mannenliefde Saison</h4>
           <aside class="s33">5.4</aside>
+          <p>Not extremely bitter and absolutely not sweet. Fresh with a dry and smooth aftertaste, lemongrass adds freshness, Szechuan pepper bestows a bit of bite and the use of Sorachi ace hops contributes fruity aromas.</p>
         </li>
         <li>
           <h4>Gebrouwen Gember Goud</h4>
           <aside class="s33">5.4</aside>
+          <p>A tastefull Pale Ale, yellow to gold coloured hazy beer with a nice foam head. At the first sip both in aroma and taste the Ginger is really there.</p>
         </li>
       </ul>
+      <figure>
+        <img src="../img/mushroom_burger_fries.jpg" alt="PAZ Funguy Burger with Fries">
+        <figcaption>Funguy Burger with Fries</figcaption>
+      </figure>
       <h3>Red wine</h3>
       <ul>
         <li>
@@ -606,6 +319,10 @@
           <p>Rioja, Spain. Tempranillo. Full-bodied yet well-balanced, it has complexity and persistence leading to a very aromatic finish. Intriguing on the nose, with wild fruit, balsamic aromas, toasty oak and toffee.</p>
         </li>
       </ul>
+      <figure>
+        <img src="../img/dry_aged_ribeye_steak.jpg" alt="PAZ Dry Aged Ribeye Steak">
+        <figcaption>Dry Aged Ribeye Steak</figcaption>
+      </figure>
       <h3>White wine</h3>
       <ul>
         <li>
@@ -620,7 +337,17 @@
           <aside class="bottle">25.-</aside>
           <p>Bourgogne, France. 100% Chardonnay. Abundant apple fruit with a suggestion of citrus, great purity and an underpinning minerality. No oak is used, so the wine reveals all of the freshness that Chardonnay can give.</p>
         </li>
+        <li>
+          <h4>Château Bellevue Monbazillac</h4>
+          <aside class="glass">6.-</aside>
+          <aside class="bottle">29.-</aside>
+          <p>Monbazillac, France. Sauvignon Blanc, Sémillon, Muscadelle. Deep yellow golden hued wine with lusciously sweet flavors of brioche, honey, and vanilla cake that shine through on the palate.</p>
+        </li>
       </ul>
+      <figure>
+        <img src="../img/organic_lamb_chop.jpg" alt="PAZ Organic Lamb Rack">
+        <figcaption>Organic Lamb Rack</figcaption>
+      </figure>
       <h3>Rosé</h3>
       <ul>
         <li>
@@ -684,8 +411,8 @@
   <footer>
     <h5>PAZ</h5>
     <h6>Open fire cooking</h6>
-    <p><a href="https://www.google.com/maps/dir//PAZ+Open+Fire+Cooking,+Utrechtsestraat+128H,+1017+VT+Amsterdam/@52.361413,4.8288902,12z/" target="_blank" rel="noopener" rel="noreferrer">Utrechtsestraat 128,<br/>1017 VT, Amsterdam</a></p>
-    <p>17:00 - 22.00<br/>Everyday</p>
+    <p><a href="https://goo.gl/maps/Xh39g1UHb4q" target="_blank" rel="noopener" rel="noreferrer">Utrechtsestraat 128,<br/>1017 VT, Amsterdam</a></p>
+    <p>12:00 - 22.00<br/>Everyday</p>
     <p>Reservation:<br/><a href="tel:+31207700700">+31 20 7700 700</a></p>
   </footer>
 </body>
