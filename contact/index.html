@@ -24,10 +24,10 @@
       </label>
       <ul class="menu">
         <li><a href="/paz/menu/">Menu</a></li>
-        <li>Reservation</li>
+        <li><a href="/paz/reservation/">Reservation</a></li>
         <li><a href="/paz/cookingstyle/">Cooking style</a></li>
         <li><a href="/paz/ingredients/">Quality of ingredients</a></li>
-        <li><a href="/paz/contact/">Contact</a></li>
+        <li>Contact</li>
       </ul>
       <a class="mapicon" href="https://goo.gl/maps/Xh39g1UHb4q" target="_blank" rel="noopener" rel="noreferrer" aria-label="Show PAZ Utrechtsestraat 128H Amsterdam on map">
         <img src="../svg/pin.svg" alt="PAZ restaurant location">
@@ -36,55 +36,18 @@
   </header>
   <main>
     <section>
-      <h2>Online Reservation</h2>
-      <div id="rm_wrapper">
-        <script type="text/javascript" src="https://www.seatme.nl/srm/?rid=8765&af=6423&lang=en"></script>
-        <script>
-          var newEvent = new Event('change');
-          var dateInput = document.querySelector('input[name="date"]');
-          if (dateInput && typeof dateInput.dispatchEvent === 'function') {
-            dateInput.dispatchEvent(newEvent);
-          }
-          var submit = document.getElementById('srm_submit');
-          if (submit) {
-            submit.setAttribute('type', 'submit');
-            submit.removeAttribute('name');
-            submit.removeAttribute('border');
-            submit.removeAttribute('src');
-            submit.value = 'Make a reservation';
-          }
-          var calendar = document.querySelector('.jcalendar');
-          if (calendar) {
-            calendar.addEventListener('click', function (e) {
-              if (e && e.target && typeof e.target.href === 'string') {
-                var prevActive = calendar.querySelector('.date-active');
-                if (prevActive) {
-                  prevActive.classList.remove('date-active');
-                }
-                e.target.classList.add('date-active');
-              }
-            });
-          }
-          var selects = document.querySelectorAll('.rm_row_value');
-          var colorSelect = function (e) {
-            e.currentTarget.classList.add('active');
-            e.currentTarget.removeEventListener('click', colorSelect);
-          };
-          if (selects && selects.length) {
-            for (i = selects.length; i--; ) {
-              selects[i].addEventListener('click', colorSelect);
-            }
-          }
-        </script>
-      </div>
+      <iframe style="width:100%;height:550px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&source=s_q&q=Utrechtsestraat%20128%20h%201017%20VT%20Amsterdam&aq=0&ie=UTF8&t=m&z=15&iwloc=A&output=embed"></iframe>
     </section>
     <section>
-      <h2>Reservation</h2>
-      <p>We're open from Monday to Friday from 12:00 to 22:00. On Saturdays we're open from 1pm, on Sundays from 2pm.</p>
-      <p>To book please use our reservation form (on this page) or call us: <a href="tel:+31207700700">+31 20 7700 700</a>.</p>
-      <p>We reserve a maximum of 50% of the tables and keep the most tables free for walk-in guests.</p>
-      <h2>Groups & Special Events</h2>
-      <p>For organization of special events, big groups or team dinners please contact us: <a href="tel:+31207700700">+31 20 7700 700</a>.</p>
+      <h2>Phone</h2>
+      <p><a href="tel:+31207700700">+31 20 7700 700</a> (during opening hours)</p>
+      <h2>Email</h2>
+      <p><a href="mailto:info@paz.world" target="_blank">info@paz.com</a></p>
+      <h2>Address</h2>
+      <p>Utrechtsestraat 128, 1017 VT, Amsterdam.</p>
+      <p>We're open Monday to Friday from 12:00 to 22:00.<br />On Saturdays from 13:00 to 22:00.<br />On Sundays from 14:00 to 22:00.</p>
+      <h2>Online</h2>
+      <p>Check our <a href="https://instagram.com/paz_amsterdam/" target="_blank" rel="noopener" rel="noreferrer">Instagram</a> & <a href="https://www.facebook.com/pazamsterdam/" target="_blank" rel="noopener" rel="noreferrer">Facebook</a> pages.</p>
     </section>
   </main>
   <footer>
