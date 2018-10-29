@@ -40,10 +40,10 @@
       <small class="updated">if you have any food allergies please let us know</small>
       <h3>Starters</h3>
       <ul>
-        <li> ( ) 2.5 Euro
+        <li>
           <h4>Home Made Onion Bread with Butter</h4>
           <aside>2.5</aside>
-          <p>1st Portion on the house.</p>
+          <p>First Portion is on the house.</p>
         </li>
         <li>
           <h4>Goat Cheese Brule</h4>
@@ -123,25 +123,25 @@
       </figure>
       <h3>Burgers</h3>
       <ul>
-        <li>
+        <li class="open">
           <h4>Classic</h4>
           <aside>11.-</aside>
-          <p class="open">180gr beef patty, caramelized onions, beef tomato, lettuce leafs, pickles, roasted homemade bread.</p>
+          <p>180gr beef patty, caramelized onions, beef tomato, lettuce leafs, pickles, roasted homemade bread.</p>
         </li>
-        <li>
+        <li class="open">
           <h4>Onion &amp; Cheese Sauce</h4>
           <aside>12.-</aside>
-          <p class="open">180gr beef patty, creamy cheese sauce, crispy onions, beef tomato, roasted homemade bread.</p>
+          <p>180gr beef patty, creamy cheese sauce, crispy onions, beef tomato, roasted homemade bread.</p>
         </li>
-        <li>
+        <li class="open">
           <h4>Paleo</h4>
           <aside>13.-</aside>
-          <p class="open">180gr beef patty, caramelized onions, beef tomato, avocado, lettuce leafs. No bread.</p>
+          <p>180gr beef patty, caramelized onions, beef tomato, avocado, lettuce leafs. No bread.</p>
         </li>
-        <li>
+        <li class="open">
           <h4>Funguy</h4>
           <aside>13.-</aside>
-          <p class="open">180g beef patty, beef tomato, charred mixed mushrooms, smokey mayo, caramelized onion, roasted homemade bread.</p>
+          <p>180g beef patty, beef tomato, charred mixed mushrooms, smokey mayo, caramelized onion, roasted homemade bread.</p>
         </li>
         <li>
           <h4 class="addition">Cheddar</h4>
@@ -422,5 +422,17 @@
       <img alt="Bestel luxe maaltijden van de beste restaurants en laat ze bij je thuis of op kantoor bezorgen" src="https://deliveroo.nl/backlinks/99745.png?id=99745">
     </a>
   </footer>
+  <script>
+    (function () {
+      var main = document.querySelector('main');
+      if (main) {
+        main.addEventListener('click', function (e) {
+          if (e && e.target && e.target.tagName === 'H4') {
+            e.target.parentNode.classList.add('open');
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

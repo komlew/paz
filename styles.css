@@ -222,6 +222,7 @@ h4 {
   padding: 0 5px;
   font-size: 22px;
   line-height: 1em;
+  cursor: pointer;
 }
 main ul {
   list-style: none;
@@ -238,8 +239,8 @@ main li p {
   font-size: 14px;
   display: none;
 }
-main li p.open {
-  display: inline-block;
+main li.open p {
+  display: block;
 }
 main aside {
   font-size: 22px;
