@@ -11,6 +11,9 @@ body {
   background: #f7f8f9;
   font-family: 'Futura-CondensedMedium', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
 }
+a {
+  color: #009c00;
+}
 
 header {
   position: fixed;
