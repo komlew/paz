@@ -8,6 +8,7 @@
   <title>PAZ restaurant Amsterdam: steaks, burgers, meat</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <link rel="stylesheet" type="text/css" href="../styles.css">
+  <link rel="shortcut icon" type="image/png" href="../favicon.ico" />
 </head>
 <body>
   <header>
@@ -36,25 +37,64 @@
   </header>
   <main>
     <section>
-      <h2>Reservation</h2>
-      <div id="rm_reservation" class="section-content">
-        <div class="rm_reservation_top"></div>
-        <div class="rm_reservation_body">
-          <link type="text/css" rel="stylesheet" href="https://www.seatme.nl/css/srm.css">
-          <div id="rm_wrapper">
-              <script language="JavaScript" type="text/javascript" src="https://www.seatme.nl/srm/?rid=8765&af=6423&lang=en"></script>
-          </div>  
-        </div>  
-        <div class="rm_reservation_bottom"></div>  
+      <h2>Online Reservation</h2>
+      <div id="rm_wrapper">
+        <script type="text/javascript" src="https://www.seatme.nl/srm/?rid=8765&af=6423&lang=en"></script>
+        <script>
+          var newEvent = new Event('change');
+          var dateInput = document.querySelector('input[name="date"]');
+          if (dateInput && typeof dateInput.dispatchEvent === 'function') {
+            dateInput.dispatchEvent(newEvent);
+          }
+          var submit = document.getElementById('srm_submit');
+          if (submit) {
+            submit.setAttribute('type', 'submit');
+            submit.removeAttribute('name');
+            submit.removeAttribute('border');
+            submit.removeAttribute('src');
+            submit.value = 'Make a reservation';
+          }
+          var calendar = document.querySelector('.jcalendar');
+          if (calendar) {
+            calendar.addEventListener('click', function (e) {
+              if (e && e.target && typeof e.target.href === 'string') {
+                var prevActive = calendar.querySelector('.date-active');
+                if (prevActive) {
+                  prevActive.classList.remove('date-active');
+                }
+                e.target.classList.add('date-active');
+              }
+            });
+          }
+          var selects = document.querySelectorAll('.rm_row_value');
+          var colorSelect = function (e) {
+            e.currentTarget.classList.add('active');
+            e.currentTarget.removeEventListener('click', colorSelect);
+          };
+          if (selects && selects.length) {
+            for (i = selects.length; i--; ) {
+              selects[i].addEventListener('click', colorSelect);
+            }
+          }
+        </script>
       </div>
+    </section>
+    <section>
+      <h2>Reservation</h2>
+      <p>From Monday to Friday we're open from 12:00 to 22:00. On Saturdays we're open from 1pm, on Sundays from 2pm.</p>
+      <p>To book please use our reservation form (on this page) or call us: <a href="tel:+31207700700">+31 20 7700 700</a>.</p>
+      <h2>Groups</h2>
+      <p>We can host up to 36 people during the lunch and dinner time. Please let us know in advance if you're planning to come in a big group.</p>
+      <h2>Special events</h2>
+      <p>For organization of special events, big groups or team dinners please contact us: <a href="tel:+31207700700">+31 20 7700 700</a>.</p>
     </section>
   </main>
   <footer>
     <h5>PAZ</h5>
     <h6>Open fire cooking</h6>
     <p><a href="https://goo.gl/maps/Xh39g1UHb4q" target="_blank" rel="noopener" rel="noreferrer">Utrechtsestraat 128,<br/>1017 VT, Amsterdam</a></p>
-    <p>12:00 - 22.00<br/>Everyday</p>
-    <p>Reservation:<br/><a href="tel:+31207700700">+31 20 7700 700</a></p>
+    <p>12:00 - 22.00 (Mon-Fri)<br />13:00 - 22.00 (Saturday)<br />14:00 - 22.00 (Sunday)</p>
+    <p>Reservation:<br/><a href="./reservation/">book online</a> or call<br /><a href="tel:+31207700700">+31 20 7700 700</a></p>
   </footer>
 </body>
 </html>
