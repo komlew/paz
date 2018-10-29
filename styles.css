@@ -235,6 +235,9 @@ main li p {
   font-size: 14px;
   display: none;
 }
+main li p.open {
+  display: inline-block;
+}
 main aside {
   font-size: 22px;
   line-height: 1em;
