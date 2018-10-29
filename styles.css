@@ -233,6 +233,7 @@ main li {
 main li p {
   margin: 5px;
   font-size: 14px;
+  display: none;
 }
 main aside {
   font-size: 22px;
