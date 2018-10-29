@@ -40,41 +40,43 @@
       <div id="rm_wrapper">
         <script type="text/javascript" src="https://www.seatme.nl/srm/?rid=8765&af=6423&lang=en"></script>
         <script>
-          var newEvent = new Event('change');
-          var dateInput = document.querySelector('input[name="date"]');
-          if (dateInput && typeof dateInput.dispatchEvent === 'function') {
-            dateInput.dispatchEvent(newEvent);
-          }
-          var submit = document.getElementById('srm_submit');
-          if (submit) {
-            submit.setAttribute('type', 'submit');
-            submit.removeAttribute('name');
-            submit.removeAttribute('border');
-            submit.removeAttribute('src');
-            submit.value = 'Make a free reservation';
-          }
-          var calendar = document.querySelector('.jcalendar');
-          if (calendar) {
-            calendar.addEventListener('click', function (e) {
-              if (e && e.target && typeof e.target.href === 'string') {
-                var prevActive = calendar.querySelector('.date-active');
-                if (prevActive) {
-                  prevActive.classList.remove('date-active');
-                }
-                e.target.classList.add('date-active');
-              }
-            });
-          }
-          var selects = document.querySelectorAll('.rm_row_value');
-          var colorSelect = function (e) {
-            e.currentTarget.classList.add('active');
-            e.currentTarget.removeEventListener('click', colorSelect);
-          };
-          if (selects && selects.length) {
-            for (i = selects.length; i--; ) {
-              selects[i].addEventListener('click', colorSelect);
+          (function () {
+            var newEvent = new Event('change');
+            var dateInput = document.querySelector('input[name="date"]');
+            if (dateInput && typeof dateInput.dispatchEvent === 'function') {
+              dateInput.dispatchEvent(newEvent);
             }
-          }
+            var submit = document.getElementById('srm_submit');
+            if (submit) {
+              submit.setAttribute('type', 'submit');
+              submit.removeAttribute('name');
+              submit.removeAttribute('border');
+              submit.removeAttribute('src');
+              submit.value = 'Make a free reservation';
+            }
+            var calendar = document.querySelector('.jcalendar');
+            if (calendar) {
+              calendar.addEventListener('click', function (e) {
+                if (e && e.target && typeof e.target.href === 'string') {
+                  var prevActive = calendar.querySelector('.date-active');
+                  if (prevActive) {
+                    prevActive.classList.remove('date-active');
+                  }
+                  e.target.classList.add('date-active');
+                }
+              });
+            }
+            var selects = document.querySelectorAll('.rm_row_value');
+            var colorSelect = function (e) {
+              e.currentTarget.classList.add('active');
+              e.currentTarget.removeEventListener('click', colorSelect);
+            };
+            if (selects && selects.length) {
+              for (i = selects.length; i--; ) {
+                selects[i].addEventListener('click', colorSelect);
+              }
+            }
+          })();
         </script>
       </div>
     </section>
