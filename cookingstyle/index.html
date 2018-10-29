@@ -24,8 +24,8 @@
       </label>
       <ul class="menu">
         <li><a href="/paz/menu">Menu</a></li>
-        <li>Reservation</li>
-        <li><a href="/paz/cookingstyle">Cooking style</a></li>
+        <li><a href="/paz/reservation">Reservation</a></li>
+        <li>Cooking style</li>
         <li><a href="/paz/ingredients">Quality of ingredients</a></li>
         <li><a href="/paz/vacancies">Vacancies</a></li>
         <li><a href="/paz/contact">Contact</a></li>
@@ -37,55 +37,25 @@
   </header>
   <main>
     <section>
-      <h2>Online Reservation</h2>
-      <div id="rm_wrapper">
-        <script type="text/javascript" src="https://www.seatme.nl/srm/?rid=8765&af=6423&lang=en"></script>
-        <script>
-          var newEvent = new Event('change');
-          var dateInput = document.querySelector('input[name="date"]');
-          if (dateInput && typeof dateInput.dispatchEvent === 'function') {
-            dateInput.dispatchEvent(newEvent);
-          }
-          var submit = document.getElementById('srm_submit');
-          if (submit) {
-            submit.setAttribute('type', 'submit');
-            submit.removeAttribute('name');
-            submit.removeAttribute('border');
-            submit.removeAttribute('src');
-            submit.value = 'Make a reservation';
-          }
-          var calendar = document.querySelector('.jcalendar');
-          if (calendar) {
-            calendar.addEventListener('click', function (e) {
-              if (e && e.target && typeof e.target.href === 'string') {
-                var prevActive = calendar.querySelector('.date-active');
-                if (prevActive) {
-                  prevActive.classList.remove('date-active');
-                }
-                e.target.classList.add('date-active');
-              }
-            });
-          }
-          var selects = document.querySelectorAll('.rm_row_value');
-          var colorSelect = function (e) {
-            e.currentTarget.classList.add('active');
-            e.currentTarget.removeEventListener('click', colorSelect);
-          };
-          if (selects && selects.length) {
-            for (i = selects.length; i--; ) {
-              selects[i].addEventListener('click', colorSelect);
-            }
-          }
-        </script>
-      </div>
+      <h2>Open Fire Cooking</h2>
+      <p>The oldest and most primitive method of cooking known, with glowing red flames and smoky ambers mostly lending themselves to frying, grilling and boiling.</p>
+      <p>Stacked-up logs of oak have become a natural part of our restaurant-design, and our dining room is perfumed with the alluring scent of wood smoke.</p>
+      <p>In order to achieve the best taste out of our Dry Aged meat and other delicacies, we use Oak wood in our open fire grill...</p>
+      <figure>
+        <img src="../img/wood_fire.jpg" alt="PAZ: food & love of fire and peace">
+        <figcaption>PAZ: Food & Love of Fire and Peace</figcaption>
+      </figure>
     </section>
     <section>
-      <h2>Reservation</h2>
-      <p>We're open from Monday to Friday from 12:00 to 22:00. On Saturdays we're open from 1pm, on Sundays from 2pm.</p>
-      <p>To book please use our reservation form (on this page) or call us: <a href="tel:+31207700700">+31 20 7700 700</a>.</p>
-      <p>We reserve a maximum of 50% of the tables and keep the most tables free for walk-in guests.</p>
-      <h2>Groups & Special Events</h2>
-      <p>For organization of special events, big groups or team dinners please contact us: <a href="tel:+31207700700">+31 20 7700 700</a>.</p>
+      <h2>Our story</h2>
+      <figure>
+        <img src="../img/square/friends.jpg" alt="PAZ people">
+      </figure>
+      <p>PAZ Amsterdam is culinary-art project offering a unique experience, tailored by a group of friends with a very colorful backgrounds yet sharing the same passion for food, love, fire & peace!</p>
+      <p>PAZ: food & art for the love of fire and peace.</p>
+      <figure>
+        <img src="../img/square/team.jpg" alt="PAZ team">
+      </figure>
     </section>
   </main>
   <footer>
