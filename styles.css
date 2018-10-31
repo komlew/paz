@@ -323,6 +323,9 @@ main aside + aside {
 /* menu */
 
 /* reservation */
+#srm {
+  margin-bottom: 20px;
+}
 .rm_header,
 .rm_restaurant_name,
 .rm_restaurant_city,
@@ -363,7 +366,7 @@ main aside + aside {
   border: 1px solid #ececec;
   border-radius: 3px;
   box-shadow: 0 1px 1px #999;
-  width: 40px;
+  width: 37px;
   display: inline-block;
   margin: 2px 0;
 }
