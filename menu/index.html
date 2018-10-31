@@ -428,7 +428,7 @@
       if (main) {
         main.addEventListener('click', function (e) {
           if (e && e.target && e.target.tagName === 'H4') {
-            e.target.parentNode.classList.add('open');
+            e.target.parentNode.classList.toggle('open');
           }
         });
       }
