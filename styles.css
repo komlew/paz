@@ -173,6 +173,14 @@ h6 {
   text-transform: uppercase;
   font-size: 1em;
 }
+.delivery {
+  display: block;
+  margin: 10px auto;
+  width: 265px;
+}
+.delivery:hover {
+  filter: brightness(110%) contrast(130%);
+}
 
 /* index */
 .logo {
@@ -189,7 +197,8 @@ h6 {
   border: 5px dotted #ccc;
   padding: 20px;
   text-align: center;
-  margin: 15px 0 20px;
+  margin: 15px auto 20px;
+  max-width: 250px;
 }
 /* index */
 
