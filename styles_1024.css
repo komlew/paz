@@ -1,0 +1,25 @@
+@media only screen and (min-device-width: 1024px) {
+  .menuicon {
+    display: none;
+  }
+  .menu {
+    transform: none;
+    transition: none;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+  .menu li {
+    display: inline-block;
+    border-top: none;
+  }
+  .menu a {
+    border-bottom: 1px solid transparent;
+  }
+  .menu a:hover,
+  .menu a:focus {
+    border-bottom-color: inherit;
+  }
+  main {
+    margin-top: 100px;
+  }
+}

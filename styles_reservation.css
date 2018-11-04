@@ -1,0 +1,114 @@
+#srm {
+  margin-bottom: 20px;
+}
+.rm_header,
+.rm_restaurant_name,
+.rm_restaurant_city,
+#rm_logo_wrapper {
+  display: none;
+}
+.jcalendar,
+#jcalendar {
+  display: block !important;
+  padding: 3px 0;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+#calendar {
+  width: 100%;
+}
+#calendar a,
+#calendar a:focus,
+#calendar a:hover,
+#calendar a:active {
+  text-decoration: none;
+  color: #000;
+  animation: none;
+}
+#calendar td {
+  font-size: 20px;
+  text-align: center;
+  width: 14.3%;
+}
+#calendar td#month,
+#calendar td.active {
+  font-weight: bold;
+}
+#calendar td.active a {
+  background: #f7f8f9;
+  border: 1px solid #ececec;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #999;
+  width: 37px;
+  display: inline-block;
+  margin: 2px 0;
+}
+#calendar td.active a:hover,
+#calendar td.active a:focus,
+.rm_row_value select:hover,
+.rm_row_value select:focus,
+.submitbutton:hover,
+.submitbutton:focus {
+  background: #b6eafb;
+  border: 1px solid #76daea;
+}
+#calendar td.active a.date-active,
+.rm_row_value.active select,
+.rm_row_value select:active {
+  background: #bbf7cc;
+  border: 1px solid #4ebd42;
+}
+#calendar td.inactive {
+  color: #ccc;
+}
+#jcalendar-links td,
+#days td {
+  color: #67768c;
+}
+#jcalendar-links .left,
+#jcalendar-links .right {
+  float: left;
+  padding: 0;
+  width: 15px;
+  height: 0;
+  border: 8px solid transparent;
+  border-right-color: #67768c;
+}
+#jcalendar-links .right {
+  float: right;
+  border-right-color: transparent;  
+  border-left-color: #67768c;
+}
+
+.rm_row_value,
+.submitbutton {
+  margin-top: 10px;
+}
+.rm_row_value input {
+  display: none;
+}
+.jcalendar,
+#jcalendar,
+.rm_row_value select,
+.submitbutton {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px #ccc;
+}
+.rm_row_value select,
+.submitbutton {
+  width: 100%;
+  font-size: 16px;
+  -webkit-appearance: menulist-button;
+  font-weight: bold;
+  height: 36px;
+}
+.submitbutton,
+.submitbutton:active {
+  -webkit-appearance: inherit;
+  background: #bbf7cc;
+  border: 1px solid #4ebd42;
+}

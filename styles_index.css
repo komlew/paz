@@ -1,0 +1,16 @@
+.logo {
+  width: 270px;
+  margin: 20px auto 40px;
+}
+.note {
+  font-size: 18px;
+  border: 5px dotted #ccc;
+  padding: 20px;
+  text-align: center;
+  margin: 15px auto 20px;
+  max-width: 250px;
+}
+.quote {
+  width: 280px;
+  margin: 10px auto;
+}
