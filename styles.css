@@ -12,7 +12,7 @@ body {
   font-family: 'Futura-CondensedMedium', 'Open Sans Condensed', 'Droid Sans', Futura, Trebuchet MS, Arial, sans-serif;
 }
 a {
-  color: #009c00;
+  color: #cb002c;
 }
 
 header {
@@ -48,7 +48,7 @@ main a:focus,
   -webkit-animation: colorchange 9s infinite;
 }
 main a img {
-  transition: 0.3s;
+  transition: .3s;
 }
 main a:hover img {
   filter: contrast(130%);
@@ -86,7 +86,7 @@ nav img {
   position: absolute;
   width: 100%;
   font-size: 0;
-  transition: 0.3s;
+  transition: .3s;
   transform: translateY(-100%);
   box-shadow: 0 1px 3px #ccc;
 }
@@ -133,7 +133,7 @@ figcaption {
   background: #bb1033;
   padding: 0 5px 1px;
   line-height: 1em;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 0 rgba(0,0,0,.3);
   display: inline-block;
 }
 section {
