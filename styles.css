@@ -112,6 +112,14 @@ main {
   font-size: 0;
   max-width: 768px;
 }
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+}
+h2:not(:first-child) {
+  margin-top: 50px;
+}
 figure {
   position: relative;
   font-size: 0;
