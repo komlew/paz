@@ -4,6 +4,9 @@
     width: 350px;
     vertical-align: top;
   }
+  .note {
+    width: 310px;
+  }
   section:nth-of-type(2n) {
     margin-left: 38px;
   }
